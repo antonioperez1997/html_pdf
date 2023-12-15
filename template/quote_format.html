@@ -1,0 +1,458 @@
+<html>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+        .no-break {
+         page-break-inside: avoid;
+        
+        }
+        .no-breaks {
+         page-break-before: always;
+        
+        }
+        .page{
+        counter-reset: page;
+        }
+            
+        .arrow-down {
+        width: 0; 
+        height: 0; 
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        margin-top: -2%;
+        margin-left: 40%;
+        /* left: 40%;
+        bottom: 5%; */
+        size: 30%;
+        }
+        .logo {
+           margin-left: 2%;
+           margin-top: -2%;
+           display: block;
+           
+        }
+        .no_border {
+            border: transparent;
+        }
+        .logocliente {
+           margin-right: 20%;
+           margin-top: -2%;
+           display: block;
+           
+        }
+        
+        .logodawipo {
+          width: 50%;
+          margin-left: 85%;
+          margin-top: 40%;
+        }
+        .letterc {
+            margin-left: 70%;
+            margin-top: 2%;   
+        }
+        .letterr {
+            margin-left: 70%;
+            margin-top: -5%;   
+        }
+        .letter {
+            font-size: 50%;
+        }
+        .lettertitle {
+            font-size: 80%;
+            font-weight: bolder;
+        }
+        .marca {
+        opacity:0.11;
+        filter: alpha(opacity=50);
+        position: fixed;
+        
+        }
+        
+        .dec {
+            text-decoration-line: overline underline line-through;
+        }
+        table,
+        th,
+        tr {
+            border: solid 1px #dbdfe5;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+        .container {
+            margin-top: -2%;
+        }
+        
+    </style>
+    <section>
+        <head>
+            <div id="pageHeader" >
+                
+                <div class="arrow-down" style="border-top: 50px solid{{colors}}"></div>
+
+                <span style="text-align: center;" class="lettertitle letterc" >Quote {{quoteId}}</span>
+                <span style="text-align: center;" class="lettertitle letterc" >Date: {{datesumary}}</span>
+                <div class="logo">
+                    <img style="width: 20%;margin-top: -8%;" src="data:image/{{typeimagednc}};base64,{{imageenc}}"/>
+
+                </div>
+            </div>
+        </head>
+        <body>
+            <div class="container">
+                <div class="row " style="padding-left: 2%;padding-right: 2%;">
+                    <table style="width: 100%;" class="no_border">
+                        <tr class="no_border">
+                            <td style="width: 50%;vertical-align: top;" class="no_border">
+                                <table style="width: 100%; text-align: left;" >
+                                    <tr style="background-color: {{colors}};color:white">
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">CUSTOMER</div>
+                                    </th></tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Name: {{namecustomer}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;width: 80%;">Address: {{address1customer}} </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;width: 80%;">Address Line 2: {{address2customer}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Postal Code: {{postalcodecustomer}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">City: {{citycustomer}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">State: {{statecustomer}} </div>
+                                        </th>
+                                    </tr>
+                                    <tr> 
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Country: {{countrycustomer}} </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Customer Reference Type: {{referenceType}}  </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%; width: 80%;">Customer Reference Number:{{referenceValue}}</div>
+                                        </th>
+                                    </tr>
+                                   
+                                    
+                                   
+                                </table>
+                            </td>
+                            <td style="width: 50%; vertical-align: top;" class="no_border">
+                                <table style="width: 100%;text-align: left;">
+                                    <tr style="background-color: {{colors}};color:white">
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">SUMMARY</div>
+                                        </th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th><div class="letter" style="margin-left: 2%;">Expiration Date: {{validUntilDate}} </div></th>
+                                    </tr>
+                                    <tr> 
+                                        <th>
+                                        <div class="letter" style="margin-left: 2%;">Origin City: {{origincity}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Destination City: {{destinationCity}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Transport Mode: {{modetransport}} </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Rate Category: {{ratecategory}} </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Delivery Mode:{{serviceCode}} </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Incoterm:  {{incoterm}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Estimated Transit Time: {{estimatedTransitTime}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Total Charges: {{totalfinally}} {{currency}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        
+                                    </tr>
+                                </table>
+
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width: 100%;" class="no_border">
+                        <tr class="no_border">
+                            <td style="width: 50%;vertical-align: top;" class="no_border">
+                                <table style="width: 100%;text-align: left;">
+                                    <tr style="background-color:{{colors}};color:white">
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">DELIVERY</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Name: {{namedelivery}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Address: {{addressdelivery1}} </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                        <div class="letter" style="margin-left: 2%;">Address Line 2: {{addressdelivery2}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Postal Code: {{postalCodeDelivery}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">City: {{addresscountrycity}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">State: {{addresstatedelivery}} </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                        <div class="letter" style="margin-left: 2%;">Country: {{addresscountrydelivery}} </div>
+                                    </th></tr>
+                                
+                                </table>        
+                            </td>
+                            <td style="width: 50%;vertical-align: top;" class="no_border">
+                                <table style="width: 100%;text-align: left;">
+                                    <tr style="background-color: {{colors}};color:white">
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">PICKUP</div>
+                                    </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Name: {{namepickup}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Address: {{addresspickup}} </div>
+                                        </th>
+                                    </tr>
+                                    <tr> 
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Address Line 2: {{addresspickup2}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Postal Code: {{postalCodepickup}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">City: {{addresscitypickup}}</div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">State: {{addresstate}} </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <div class="letter" style="margin-left: 2%;">Country: {{addresscountry}} </div>
+                                        </th>
+                                    </tr>
+                                
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <br>
+           <div class="no-break">
+            <table style="width: 95%;margin-left: 2%;" class="no-break">
+                <td colspan="10" class="letter" style="background-color: {{colors}};color: white;text-align: center;">PACKAGES</td>
+                <tr style="background-color: {{colors}};color: white;">
+                    <th style="width: 10%;" class="letter">Count</th>
+                    <th style="width: 10%;"class="letter">Package Type</th>
+                    <th style="width: 10%;"class="letter" >Dimensions</th>
+                    <th style="width: 10%;"class="letter">UoM</th>
+                    <th style="width: 10%;"class="letter">Gross Weight</th>
+                    <th style="width: 10%;"class="letter">UoM</th>
+                    <th style="width: 10%;"class="letter">Volumetric weight</th>
+                    <th style="width: 10%;"class="letter">Chargeabe Weight</th>
+                    
+                </tr>
+               {{#each thepackages1}}
+                <tr>
+                    <th style="width: 10%;"class="letter">{{quantity}}</th>
+                    <th style="width: 14%;"class="letter">{{packagetypes}}</th>
+                    <th style="width: 10%;"class="letter">{{lengthh}} x {{width}} x {{height}}</th>
+                    <th style="width: 10%;"class="letter">{{dimensionsUnit}}</th>
+                    <th style="width: 10%;"class="letter">{{weight}}</th>
+                    <th style="width: 10%;"class="letter">kg</th>
+                    <th style="width: 10%;"class="letter">{{volumetricWeight}}</th>
+                    <th style="width: 10%;"class="letter">{{chargeableWeighttotal}}</th>
+                  
+                </tr>
+               {{/each}}
+               
+                <tr>
+                    <th class="letter" colspan="10" style="background-color:{{colors}};text-align:right;color:white">
+                        Total : {{totalfinallypackages}}
+                    </th>
+                </tr>
+    
+            </table>
+    
+           </div>
+           <br>
+            {{# if modeOfTransport}}
+           <div class="no-break">
+            <table style="width: 95%;margin-left: 2%;" class="no-break">
+                <td colspan="10" class="letter" style="background-color: {{colors}};color: white;text-align: center;">CONTAINERS</td>
+                <tr style="background-color: {{colors}};color: white;">
+                    <th style="width: 10%;"class="letter">Container Count</th>
+                    <th style="width: 10%;"class="letter">Container Type</th>
+                    <th style="width: 10%;"class="letter" >VGM</th>
+                    <th style="width: 10%;"class="letter">UoM</th>
+                    <th style="width: 10%;"class="letter">Volume</th>
+                    <th style="width: 10%;"class="letter">Volume UoM</th>
+                </tr>
+                {{#each quotesthecontainer}}
+                <tr>
+                    <th style="width: 10%;"class="letter">{{number}}</th>
+                    <th style="width: 10%;"class="letter">{{containerType}}</th>
+                    <th style="width: 10%;"class="letter">{{vgm}}</th>
+                    <th style="width: 10%;"class="letter">{{weightUom}}</th>
+                    <th style="width: 10%;"class="letter">{{volume}}</th>
+                    <th style="width: 10%;"class="letter">{{volumeUom}}</th>
+                   
+    
+                </tr> 
+                {{/each}}
+                <tr>
+                    <th class="letter" colspan="10" style="background-color:{{colors}};text-align:right;color:white">
+                        Total : {{totalcontainer}}
+                    </th>
+                </tr>
+                    
+            </table>
+
+            </div>
+            <br>
+            {{/if}}
+            <div class="no-break">
+                <table style="width: 95%;margin-left: 2%;">
+                    <td colspan="10" class="letter" style="background-color: {{colors}};color: white;text-align: center;">CHARGES</td>
+                    <tr style="background-color: {{colors}};color: white;">
+                        <th style="width: 14%;"class="letter">Description</th>
+                        <th style="width: 10%;"class="letter">QTY</th>
+                        <th style="width: 10%;"class="letter">UoM</th>
+                        <th style="width: 10%;text-align: right;"class="letter" >Rate / Unit</th>
+                        <th style="width: 6%;"class="letter">Currency</th>
+                        <th style="width: 10%;text-align: right;"class="letter">Total</th>
+                    </tr>
+                    {{#each thecharges}}
+                    <tr>
+                        <th style="width: 16%;"class="letter">{{serviceDescription}}</th>
+                        <th style="width: 10%;"class="letter">{{quantity}}</th>
+                        <th style="width: 6%;"class="letter">{{uom}}</th>
+                        <th style="width: 10%;text-align: right;"class="letter">{{incomeRate}}</th>
+                        <th style="width: 6%;"class="letter">{{currency}}</th>
+                        <th style="width: 10%;text-align: right;"class="letter">{{totalIncomeCharge}}</th>
+                       
+        
+                    </tr>
+                    {{/each}}
+                    <tr>
+                        <th class="letter" colspan="10" style="background-color:{{colors}};text-align:right;color:white">
+                            Total : {{totalfinally}}
+                        </th>
+                    </tr>
+                        
+                </table>
+                <br>
+            </div>
+            <div class="no-break">
+                <table style="width: 95%;margin-left: 2%;" class="no-break">
+                    <td colspan="10" class="letter" style="background-color: {{colors}};color: white;text-align: center;">COMMENTS</td>
+                    {{#each comments}}
+                    <tr>
+                        <th class="letter">
+                            {{description}}
+                        </th>
+                    </tr>
+                    {{/each}}
+                        
+                </table>
+            </div> 
+            <br>
+            <div class="no-break">
+                <table style="width: 95%;margin-left: 2%;" class="no-break">
+                    <td colspan="10" class="letter" style="background-color: {{colors}};color: white;text-align: center;">TERMS</td>
+                    <tr>
+                        <th class="letter" style="text-align: justify;">
+                            Insure your cargo (FULL COVERAGE-ALL RISK) – Please ask our prices. OPERACIONES shall NOT be liable for any damages, delays or monetary loss of any type if you decided to not hire insurance. Cargo is subject to space and availability at the time of the booking. Inland prices are valid for 7 days unless agreed in written. Quote is based on equipment and carrier availability. Transit times are estimated and not guaranteed unless specified in written. Quotes are not valid for residential pick up unless specified at the time of the quote - if you have a residential pick-up please advise us in advance. Deadline & Cut- off times For Non-Guaranteed & Guaranteed P/U’s are until 10 AM of our local time to have a better chance to pick up same day if not pick up will be the following business day. Prices may vary depending on dims, weights & piece count. Extras and accessorial charges such as detention times, cancellation fees, re-weights, etc. are NOT included.The shipper must provide OUR bill of lading to the driver in order for the rates to apply. In the event this is not provided, administrative charges and fees may apply. Carriers need a window of pickup of at least 3-4 hours & FTL/Partial Trucks 24-72 hrs. Miss Trip Fee of $65.00 will be charged once dirver has been dispatched and shipper does not release cargo to driver. Carrier does not include the pick-up day nor weekends or holidays on their estimated transit time’s calculations. OPERACIONES shall NOT be liable for any damages, delays or monetary loss of any type caused by: Acts of God or other Force Majeure Events; ie: weather delays, storms, floods, war, fires. Freight claims are not processed unless the freight invoice is paid to the carrier
+                        </th>
+                    </tr>
+                </table>
+            </div> 
+        </body>
+        <div id="pageFooter" stye="text-align:right">
+            <table class="no-border" style="margin-left:1%;width: 98%; border: solid 5px white;">
+                <tr>
+                    <td style="text-align: left;width: 50%;"><span class="letter" style="font-weight: bold;">Generado Por: </span><span class="letter">{{users}}</span></td>
+                    <td style="text-align: right;"><span class="letter">POWERED  BY</span><img style="width: 17%;margin-right:4%;margin-bottom: -1%;" src="data:image/{{typeimagedaw}};base64,{{imagendaw}}"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</html>

@@ -1,0 +1,577 @@
+<html>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+        .no-break {
+         page-break-inside: avoid;
+        
+        }
+        .no-breaks {
+         page-break-before: always;
+        
+        }
+        .page{
+        counter-reset: page;
+        }
+            
+        .arrow-down {
+        width: 0; 
+        height: 0; 
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        margin-top: -2%;
+        margin-left: 40%;
+        /* left: 40%;
+        bottom: 5%; */
+        size: 30%;
+        }
+        .logo {
+           margin-left: 2%;
+           margin-top: -2%;
+           display: block;
+           
+        }
+        
+        .logodawipo {
+          width: 50%;
+          margin-left: 85%;
+          margin-top: 40%;
+        }
+        .letterc {
+            margin-left: 63%;
+            margin-top: 2%;   
+        }
+        .letterr {
+            margin-left: 70%;
+            margin-top: -5%;   
+        }
+        .letter {
+            font-size: 55%;
+        }
+        .lettertitle {
+            font-size: 80%;
+            font-weight: bolder;
+        }
+        .marca {
+        opacity:0.11;
+        filter: alpha(opacity=50);
+        position: fixed;
+        
+        }
+        
+        .dec {
+            text-decoration-line: overline underline line-through;
+        }
+        table,
+        th,
+        tr {
+            border: solid 1px #dbdfe5;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+        .container {
+            margin-top: -1%;
+        }
+        
+    </style>
+    <section>
+        <head>
+            <div id="pageHeader">
+                
+                <div class="arrow-down" style=" border-top: 50px solid {{colors}};"></div>
+                
+                <span class="lettertitle letterc" >Booking Request {{numberbooking}}</span>
+                <span class="lettertitle letterc" >Date: {{datenow}}</span>
+               
+                <div class="logo">
+                    <img style="width: 20%;margin-top: -8%;" src="data:image/{{typeimagednc}};base64,{{imageenc}}"/>
+
+                </div>
+                <!-- <div style="margin-left: 2%;margin-right:3%">
+                <hr x1="20" y1="15" x2="8000" y2="15">
+                <hr x1="20" y1="15" x2="8000" y2="15">
+                </div> -->
+              </div>
+            
+            
+        </head>
+        
+        <body>
+            <div class="container">
+                <div class="row " style="padding-left: 2%;padding-right: 3%;">
+                    <div class="letter" style="background-color: {{colors}};color:white;text-align: center;">GENERAL INFORMATION</div>
+
+                    <div  style="position: relative; float: left; width: 50%; ">
+                        <table style="width: 100%; text-align: left;" >
+
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Shipping Instruction Submitted by: {{userName}} </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Email Address: {{userEmail}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Phone Number: {{userPhone}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Mode of Transport: {{transport}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Customer Reference Type: {{referenceType}} </div>
+                                </th>
+                            </tr>
+                            <tr> 
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Customer Reference Number: {{referenceValue}}</div>
+                                </th>
+                            </tr>
+                        </table>
+                       
+                    </div>
+    
+                    <div style="position: relative; float: left; width: 50%;">
+                        <table style="width: 100%;text-align: left;">
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Delivery Mode: {{deliverymode}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th><div class="letter" style="margin-left: 2%;">Rate Category: {{ratecategory}} </div></th>
+                            </tr>
+                            <tr> 
+                                <th>
+                                <div class="letter" style="margin-left: 2%;">Carrier: {{carrier}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Incoterm: {{incoterm}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Inconterm Location: {{inconterl}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Shipment Type: {{shipment}} </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                
+                            </tr>
+                        </table>
+                        <br>
+                        
+                    </div>
+
+
+                    <div style="position: relative; float: left; width: 50%;">
+                        <table style="width: 100%;text-align: left;">
+                            <tr style="background-color: {{colors}};color:white">
+                            <th>
+                                <div class="letter" style="margin-left: 2%;">SHIPPER</div>
+                            </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Name: {{nameshipper}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Address Line 1: {{addreshipper1}}</div>
+                                </th>
+                            </tr>
+                            <tr> 
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Address Line 2: {{addreshipper2}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Postal Code: {{postalcodeshipper}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">City: {{cityshipper}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">State: {{stateshipper}} </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Country: {{countryshipper}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Contact: {{contactnameshipper}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Phone: {{contactphoneshipper}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">E-mail: {{contactemailshipper}}</div>
+                                </th>
+                            </tr>
+                        
+                        </table>
+                      
+                    </div>
+    
+                    <div style="position: relative; float: left; width: 50%;">
+                        <table style="width: 100%;text-align: left;">
+                            <tr style="background-color: {{colors}};color:white">
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">CONSIGNEE</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Name: {{nameconsignee}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Address Line 1:  {{addressconsignee1}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                <div class="letter" style="margin-left: 2%;">Address Line 2: {{addressconsignee2}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Postal Code: {{postalconsignee}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">City: {{cityconsignee}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">State: {{stateconsignee}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Country: {{countryconsignee}}</div>
+                                </th>
+                             </tr>
+                             <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Contact: {{contactnameconsignee}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Phone: {{contactphoneconsignee}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">E-mail: {{contactemailconsignee}}</div>
+                                </th>
+                            </tr>
+                        
+                        </table>
+                    </div>
+                    <div style="position: relative;  float: right; width: 50%"> 
+                        <table style="width: 100%;text-align: left;">
+                            <tr style="background-color:{{colors}};color:white">
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">DELIVERY</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Name: {{namedelivery}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Contact Name: {{contactnamedelivery}} </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                <div class="letter" style="margin-left: 2%;">Contact Email: {{contactemaildelivery}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Contact Phone: {{contactphonedelivery}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">City: {{addresscountrycity}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">State: {{addresstatedelivery}} </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                <div class="letter" style="margin-left: 2%;">Country: {{addresscountrydelivery}} </div>
+                            </th></tr>
+                        
+                        </table>       
+                    </div>
+
+                    
+                    <div style="position: relative; float: right; width: 50%; margin-top: 0%;">
+                        <table style="width: 100%;text-align: left;">
+                            <tr style="background-color:{{colors}};color:white">
+                            <th>
+                                <div class="letter" style="margin-left: 2%;">PICK UP</div>
+                            </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Name: {{namepickup}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Contact  Name: {{contactname}} </div>
+                                </th>
+                            </tr>
+                            <tr> 
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Contact Email: {{contactemail}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Contact Phone: {{contactphone}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">City: {{addresscitypickup}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">State: {{addresstate}} </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Country: {{addresscountry}} </div>
+                                </th>
+                            </tr>
+                        
+                        </table>
+                    </div>
+
+
+
+                    
+                    <div style="position: relative; float: left; width: 50%;">
+                        <table style="width: 100%;text-align: left;">
+                            <tr style="background-color: {{colors}};color:white">
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">ORIGIN</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Country: {{origincountry}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Name: {{originlocation}} </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                <div class="letter" style="margin-left: 2%;">Code: {{originlocationcode}}</div>
+                                </th>
+                            </tr>
+
+                        
+                        </table>   
+                        
+                    </div>
+
+                    <div style="position: relative; float: left; width: 50%;">
+                        <table style="width: 100%;text-align: left;">
+                            <tr style="background-color: {{colors}};color:white">
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">DESTINATION</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Country: {{destinationcountry}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Name:  {{destinationname}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                <div class="letter" style="margin-left: 2%;">Code: {{destinationcode}}</div>
+                                </th>
+                            </tr>
+                            
+                        
+                        </table>
+                    </div>
+                    <br>
+                    <div class="negrita" style="background-color: white;color:white;text-align: center;">fdgdf</div>
+ 
+                    <div class="no-break">
+                            <table style="width: 100%; " class="no-break">
+                                <td colspan="10" class="letter" style="background-color: {{colors}};color: white;text-align: center;">CARGO</td>
+                                <tr style="background-color: {{colors}};color: white;">
+                                    <th style="width: 10%;" class="letter">Count</th>
+                                    <th style="width: 10%;"class="letter">Package Type</th>
+                                    <th style="width: 10%;"class="letter" >Dimensions</th>
+                                    <th style="width: 10%;"class="letter">UoM</th>
+                                    <th style="width: 10%;"class="letter">Gross Weight</th>
+                                    <th style="width: 10%;"class="letter">UoM</th>
+                                    <th style="width: 10%;"class="letter">Volumetric weight</th>
+                                    <th style="width: 10%;"class="letter">Chargeabe Weight</th>
+                                    
+                                </tr>
+                               {{#each thepackages1}}
+                                <tr>
+                                    <th style="width: 10%;"class="letter">{{quantity}}</th>
+                                    <th style="width: 14%;"class="letter">{{packagetypes}}</th>
+                                    <th style="width: 10%;"class="letter">{{lengthh}} x {{width}} x {{height}}</th>
+                                    <th style="width: 10%;"class="letter">{{dimensionsUnit}}</th>
+                                    <th style="width: 10%;"class="letter">{{weight}}</th>
+                                    <th style="width: 10%;"class="letter">kg</th>
+                                    <th style="width: 10%;"class="letter">{{volumetricWeight}}</th>
+                                    <th style="width: 10%;"class="letter">{{chargeableWeighttotal}}</th>
+                                  
+                                </tr>
+                               {{/each}}
+                               
+                            
+                                <tr>
+                                    <th class="letter" colspan="10" style="background-color:{{colors}};text-align:right;color:white">
+                                        Total : {{totalfinallypackages}}
+                                    </th>
+                                </tr>
+                    
+                            </table>
+                    
+                    </div>
+                <br> <br>
+                        {{#if modeOfTransport}}
+                        <div class="no-break">
+                            <table style="width: 100%; " class="no-break">
+                                <tr style="background-color: {{colors}};color: white;">
+                                    <th style="width: 10%;"class="letter">Container Count</th>
+                                    <th style="width: 10%;"class="letter">Container Type</th>
+                                    <th style="width: 10%;"class="letter" >Gross Weight</th>
+                                    <th style="width: 10%;"class="letter">UoM</th>
+                                    <th style="width: 10%;"class="letter">Volume</th>
+                                    <th style="width: 10%;"class="letter">Volume UoM</th>
+                                </tr>
+                                {{#each quotesthecontainer}}
+                                <tr>
+                                    <th style="width: 10%;"class="letter">{{palletsQuantity}}</th>
+                                    <th style="width: 10%;"class="letter">{{containerType}}</th>
+                                    <th style="width: 10%;"class="letter">{{weight}}</th>
+                                    <th style="width: 10%;"class="letter">{{weightUom}}</th>
+                                    <th style="width: 10%;"class="letter">{{volume}}</th>
+                                    <th style="width: 10%;"class="letter">{{volumeUom}}</th>
+                                
+                    
+                                </tr> 
+                                {{/each}}
+                                <tr>
+                                    <th class="letter" colspan="10" style="background-color:{{colors}};text-align:right;color:white">
+                                        Total : {{totalcontainer}}
+                                    </th>
+                                </tr>
+                                    
+                            </table>
+
+                        </div>
+                       
+                    {{/if}}
+
+                   
+                   
+                    
+                
+                    
+                    
+                </div>
+            </div>
+            <br>
+          
+            
+            <div class="no-break">
+                <table style="width: 95%;margin-left: 2%;" class="no-break">
+                    <td colspan="10" class="letter" style="background-color: {{colors}};color: white;text-align: center;">SPECIAL INSTRUCTIONS</td>
+                    
+                    <tr>
+                        {{#each commentsbooking}}
+                        <th class="letter">
+                            <spa style="text-align: left;">{{datecommets}}</spa>
+                            <spa style="text-align: center;">{{commentsbb}}</spa>
+                             
+                        </th>
+                        
+                        {{/each}}
+                    </tr>
+                   
+                        
+                </table>
+            </div> 
+        </body>
+        <div id="pageFooter" stye="text-align:right">
+       
+            <table class="no-border" style="margin-left:1%;width: 98%; border: solid 5px white;">
+                <tr>
+                    <td style="text-align: left;width: 50%;"><span class="letter" style="font-weight: bold;">Generado Por: </span><span class="letter">{{users}}</span></td>
+                    <td style="text-align: right;"><span class="letter">POWERED  BY</span><img style="width: 17%;margin-right:4%;margin-bottom: -1%;" src="data:image/{{typeimagedaw}};base64,{{imagendaw}}"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </section>
+   
+   
+        
+
+   
+</html>

@@ -1,0 +1,332 @@
+<html>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+        .no-break {
+         page-break-inside: avoid;
+        
+        }
+        .no-breaks {
+         page-break-before: always;
+        
+        }
+        .page{
+        counter-reset: page;
+        }
+            
+        .arrow-down {
+        width: 0; 
+        height: 0; 
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        margin-top: -2%;
+        margin-left: 40%;
+        /* left: 40%;
+        bottom: 5%; */
+        size: 30%;
+        }
+        .logo {
+           margin-left: 2%;
+           margin-top: -2%;
+           display: block;
+           
+        }
+        
+        .logodawipo {
+          width: 50%;
+          margin-left: 85%;
+          margin-top: 40%;
+        }
+        .letterc {
+            margin-left: 63%;
+            margin-top: 2%;   
+        }
+        .letterr {
+            margin-left: 70%;
+            margin-top: -5%;   
+        }
+        .letter {
+            font-size: 55%;
+        }
+        .lettertitle {
+            font-size: 80%;
+            font-weight: bolder;
+        }
+        .marca {
+        opacity:0.11;
+        filter: alpha(opacity=50);
+        position: fixed;
+        
+        }
+        
+        .dec {
+            text-decoration-line: overline underline line-through;
+        }
+        table,
+        th,
+        tr {
+            border: solid 1px #dbdfe5;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+        
+    </style>
+    <section>
+        <head>
+            <div id="pageHeader">
+                
+                <div class="arrow-down" style=" border-top: 50px solid {{colors}};"></div>
+                
+                <span class="lettertitle letterc" >Purchase Order</span><br>
+                <span class="letter letterc" >PO # :  {{numberpurchase}}</span>
+                <span class="letter letterc" >Date: {{datenow}}</span>
+                <span class="letter letterc" >Terms: {{terms}}</span>
+                
+                <div class="logo">
+                    <img style="width: 20%;margin-top: -8%;" src="data:image/{{typeimagednc}};base64,{{imagencliente}}"/>
+
+                </div>
+                <div style="margin-left: 2%;margin-right:3%">
+                <hr x1="20" y1="15" x2="8000" y2="15">
+                <hr x1="20" y1="15" x2="8000" y2="15">
+
+                </div>
+              </div>
+            
+            
+        </head>
+        
+        <body>
+            <div class="container">
+                <div class="row " style="padding-left: 2%;padding-right: 3%;">
+                    <div  style="position: relative; float: left; width: 50%; ">
+                        <table style="width: 100%; text-align: left;" >
+                            <tr style="background-color: {{colors}}; color:white">
+                                <th> 
+                                <div class="letter" style="margin-left: 2%;">SUPPLIER</div>
+                                </th>  
+                            </tr>
+                            
+                        
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Seller Name: {{seller}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Company:  </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Street Address: {{addressLocation}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">City: {{city}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Zip Code: {{zipCode}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Phone:  {{phone}}</div>
+                                </th>
+                            </tr>
+                            <tr> 
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Email: </div>
+                                </th>
+                            </tr>
+                        </table>
+                       
+                    </div>
+    
+                    <div style="position: relative; float: left; width: 50%;">
+                        <table style="width: 100%;text-align: left;">
+                            <tr style="background-color: {{colors}}; color:white">
+                                <th> 
+                                <div class="letter" style="margin-left: 2%;">SHIP TO </div>
+                                </th>  
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Purchase Name: {{nameship}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th><div class="letter" style="margin-left: 2%;">Company: </div></th>
+                            </tr>
+                            <tr> 
+                                <th>
+                                <div class="letter" style="margin-left: 2%;">Street Address: {{address}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">City: {{cityship}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Zip Code: {{zipCodeship}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Phone: {{phoneship}} </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">E-mail: </div>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <div class="negrita" style="background-color: white;color:white;text-align: center;">fdgdf</div>
+
+                    <div>
+                       
+                        <div  style="position: relative; float: left; width: 100%; ">
+                        
+                            <table style="width: 100%;text-align: left;" >
+                                <tr style="background-color: {{colors}}; color:white">
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Ship Via</div>
+                                    </th>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Iconterm</div>
+                                    </th>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Inconterm Location </div>
+                                    </th>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Carrier </div>
+                                    </th>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Delivery Date</div>
+                                    </th>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Requested Delivery Date at Destination</div>
+                                    </th>
+                                </tr>
+                               
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    
+                                </tr>
+                               
+                            </table>
+                            <br>
+                        </div>
+
+                        <div  style="position: relative; float: left; width: 100%; ">
+                        
+                            <table style="width: 100%;text-align: left;" >
+                                <tr style="background-color: {{colors}}; color:white">
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Art</div>
+                                    </th>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Code</div>
+                                    </th>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Qty</div>
+                                    </th>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">UoM</div>
+                                    </th>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Description </div>
+                                    </th>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Currency</div>
+                                    </th>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Unit Price</div>
+                                    </th>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Total </div>
+                                    </th>
+                                </tr>
+                                
+                                {{#each product}}
+                                <tr>
+                                    <th class="letter">{{art}}</th>
+                                    <th class="letter">{{sku}}</th>
+                                    <th class="letter">{{qty}}</th>
+                                    <th class="letter">{{packagetype}}</th>
+                                    <th class="letter">{{description}}</th>
+                                    <th class="letter">{{currency}}</th>
+                                    <th class="letter">{{unitPrace}}</th>
+                                    <th class="letter">{{total}}</th>
+                                    
+                                </tr>
+                                {{/each}}
+                            </table>
+                            <br>
+                        </div>
+    
+                        
+                    </div>
+                    
+                
+                    
+                    
+                </div>
+            </div>
+            <div class="no-break">
+                <table style="width: 95%;margin-left: 2%;" class="no-break">
+                    <td colspan="10" class="letter" style="background-color: {{colors}};color: white;text-align: center;">INSTRUCTIONS</td>
+                    
+                    <tr>
+                        <th class="letter">
+                            {{comments}}
+                        </th>
+                    </tr>
+                   
+                        
+                </table>
+            </div> 
+            <br><br><br><br>
+            <div class="no-break" style="text-align: left; width:50%;margin-left: 2%">
+                <div class="letter">
+                    <h2>Approved By</h2>
+                    <br>
+                    <hr>
+                </div>
+            </div> 
+        </body>
+        <div id="pageFooter" stye="text-align:right">
+       
+            <table class="no-border" style="margin-left:1%;width: 98%; border: solid 5px white;">
+                <tr>
+                    <td style="text-align: left;width: 50%;"><span class="letter" style="font-weight: bold;">Generado Por: </span><span class="letter">{{users}}</span></td>
+                    <td style="text-align: right;"><span class="letter">POWERED  BY</span><img style="width: 17%;margin-right:4%;margin-bottom: -1%;" src="data:image/{{typeimagedaw}};base64,{{imagendaw}}"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </section>
+   
+   
+        
+
+   
+</html>

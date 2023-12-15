@@ -1,0 +1,195 @@
+<html>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+        .no-break {
+         page-break-inside: avoid;
+        
+        }
+        .no-breaks {
+         page-break-before: always;
+        
+        }
+        .page{
+        counter-reset: page;
+        }
+            
+        .arrow-down {
+        width: 0; 
+        height: 0; 
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        margin-top: -2%;
+        margin-left: 40%;
+        /* left: 40%;
+        bottom: 5%; */
+        size: 30%;
+        }
+        .logo {
+           margin-left: 2%;
+           margin-top: -2%;
+           display: block;
+           
+        }
+        
+        .logodawipo {
+          width: 50%;
+          margin-left: 85%;
+          margin-top: 40%;
+        }
+        .letterc {
+            margin-left: 43%;
+            margin-top: 2%;   
+            
+        }
+        .letterr {
+            margin-left: 70%;
+            margin-top: -5%;   
+        }
+        .letter {
+            font-size: 30%;
+        }
+        .lettertitle {
+            font-size: 80%;
+            font-weight: bolder;
+        }
+        .marca {
+        opacity:0.11;
+        filter: alpha(opacity=50);
+        position: fixed;
+        
+        }
+        .logocliente {
+           margin-left: 78%;
+           margin-top: -2%;
+           display: block;
+        }
+        
+        .dec {
+            text-decoration-line: overline underline line-through;
+        }
+        table,
+        th,
+        tr {
+            border: solid 1px #dbdfe5;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+        .container {
+            margin-top: -2%;
+        }
+        
+    </style>
+    <section>
+        <head>
+            <div id="pageHeader" >
+                
+                <div class="arrow-down" style="border-top: 50px solid #638ba3"></div>
+
+                <span class="lettertitle letterc" >Embarques {{quoteId}}</span>
+                <span class="lettertitle letterc" >Date: {{datesumary}}</span>
+                <!-- <div class="marca">
+                    <img style="width: 20%;" src="data:image/{{typeimagenmarca}};base64,{{imagenmarca}}"/>
+
+                </div> -->
+                <div class="logocliente">
+                    <img style="width: 50%;margin-top: -12%;position: relative;" src="data:image/{{typeimagednc}};base64,{{imagencliente}}"/>
+
+                </div>
+                
+                <div class="logo">
+                    <img style="width: 18%;margin-top: -8%;" src="data:image/{{typeimagednc}};base64,{{imageenc}}"/>
+
+                </div>
+                
+               
+                
+              </div>
+            
+            
+        </head>
+        
+        <body>
+            
+           <div class="no-break">
+            <table style="width: 95%;position:static;margin-left: 3%;margin-top: 3%;" class="no-break">
+                <tr style="background-color: #638ba3;color: white;">
+                    <th   class="letter">AÑO - MES</th>
+                    <th   class="letter">SENDING PLANT CODE</th>
+                    <th   class="letter" >SENDING PLANT NAME</th>
+                    <th   class="letter">DOCUMENTO DE TRANSPORTE</th>
+                    <th   class="letter">FACTURA</th>
+                    <th   class="letter">TRANSPORTER</th>
+                    <th  class="letter" ># BULTOS</th>
+                    <th   class="letter"># PIEZAS</th>
+                    <th   class="letter">FECHA PGI</th>
+                    <th   class="letter">FECHA REAL DE SALIDA</th>
+                    <th   class="letter">FECHA REAL DE LLEGADA</th>
+                    <th   class="letter">NUMERO DE DUA</th>
+                    <th   class="letter">FECHA DUA</th>
+                    <th   class="letter">FECHA DE ENTREGA EN ALMACEN</th>
+                    <th   class="letter">FECHA DE INGRESO EN SAP</th>
+                    <th   class="letter">DÍAS TRANSITO COMPLETO</th>
+                    <th   class="letter">STATUS</th>
+                    <th   class="letter">COMENTARIO</th>
+                </tr>
+               {{#each delivaryshipmet}}
+                <tr class="no-break">
+                    <th   class="letter">{{anio_mes}}</th>
+                    <th    class="letter">{{sending_plant_code}}</th>
+                    <th   class="letter">{{sending_plant_name}}</th>
+                    <th   class="letter">{{document_transport}}</th>
+                    <th   class="letter">{{factura}}</th>
+                    <th   class="letter">{{transporter}}</th>
+                    <th   class="letter">{{bultos}}</th>
+                    <th   class="letter">{{piezas}}</th>
+                    <th   class="letter">{{fecha_pgi}}</th>
+                    <th   class="letter">{{fecha_real_salida}}</th>
+                    <th   class="letter">{{fecha_real_llegada}}</th>
+                    <th   class="letter">{{numero_dua}}</th>
+                    <th   class="letter">{{fecha_dua}}</th>
+                    <th   class="letter">{{fecha_entrega_almacen}}</th>
+                    <th   class="letter">{{fecha_ingreso_sap}}</th>
+                    <th   class="letter">{{dias_transito_completo}}</th>
+                    <th   class="letter">{{status}}</th>
+                    <th   class="letter">{{Comment}}</th>
+                  
+                    
+                </tr>
+               {{/each}}
+               
+                
+    
+            </table>
+    
+           </div>
+           <br>
+        
+            </table>
+    
+           </div>
+           
+            <br>
+        </body>
+        <div id="pageFooter">
+            <div style="text-align: left;">
+                <span style="font-size: 30%;margin-bottom: -1%;">Fecha y Hora de descarga {{datedownload}}</span>
+            </div>
+            
+            <div style="text-align: right;">
+                <span style="text-align: right;" class="letter">POWERED BY</span><img style="width: 10%;margin-right:4%;margin-bottom: -1% ;" src="data:image/{{typeimagedaw}};base64,{{imagendaw}}"/>
+
+            </div>
+
+        </div>
+       
+
+    </section>
+   
+   
+        
+
+   
+</html>
