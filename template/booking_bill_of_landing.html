@@ -1,0 +1,678 @@
+<html>
+<style>
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+  }
+
+  .no-break {
+    page-break-inside: avoid;
+  }
+
+  .no-breaks {
+    page-break-before: always;
+  }
+
+  .page {
+    counter-reset: page;
+  }
+
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    margin-top: -2%;
+    margin-left: 40%;
+    /* left: 40%;
+        bottom: 5%; */
+    size: 30%;
+  }
+
+  .logo {
+
+    display: block;
+  }
+
+  .logodawipo {
+    width: 50%;
+    margin-left: 85%;
+    margin-top: 40%;
+  }
+
+  .letterc {
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+
+  .letterr {
+    margin-left: 55%;
+    margin-top: -5%;
+  }
+
+  .letter {
+    font-size: 38%;
+  }
+
+  .letterbodler {
+    font-size: 35%;
+    font-weight: bolder;
+  }
+
+  .lettertitle {
+    font-size: 80%;
+    font-weight: bolder;
+  }
+
+  .lettertitleG {
+    font-size: 56%;
+  }
+
+  .marca {
+    opacity: 0.11;
+    filter: alpha(opacity=50);
+    position: fixed;
+  }
+
+  .dec {
+    text-decoration-line: overline underline line-through;
+  }
+
+  table,
+  th,
+  td,
+  tr {
+    border: solid 1px #525252;
+    border-collapse: collapse;
+    padding: 2px;
+    border-width: thin;
+  }
+
+  td[rowspan="2"]:first-child {
+    border-right: 1px solid black;
+  }
+
+  td[rowspan="2"]:last-child {
+    border-left: 1px solid black;
+  }
+
+  .container {
+    margin-top: -1%;
+  }
+
+  .no_borde {
+    border: transparent;
+  }
+
+
+  th.ancho {
+    height: 75px;
+  }
+
+  th.anchop {
+    height: 93px;
+  }
+
+  th.anchoinf {
+    height: 65px;
+  }
+
+  th.anchoto {
+    height: 40px;
+  }
+
+  th.anchoairp {
+    height: 26px;
+  }
+
+  th.anchodf {
+    height: 12px;
+  }
+
+  th.anchoins {
+    height: 40px;
+  }
+
+
+
+  th.widthinstble {
+    width: 275px;
+  }
+
+  th.widthins {
+    width: 137px;
+  }
+
+  .cuadradon {
+    width: 110px;
+    height: 13px;
+    border: 1px solid #525252;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .lettersmall {
+    font-size: 35%;
+  }
+
+  .lettersmale {
+    font-size: 32%;
+  }
+
+
+  th.gray {
+    background: #d3d3d3
+  }
+
+  .back-text {
+    float: right;
+    right: 20px
+      /* Otros estilos que desees aplicar */
+  }
+
+  .tableTo,
+  th.tableTo,
+  td.tableTo,
+  tr.tableTo {
+    border-top: solid 1px transparent;
+    border-bottom: solid 1px transparent;
+  }
+
+  tableInterna,
+  th.tableInterna,
+  tr.tableInterna {
+    border: solid 1px transparent;
+    border-collapse: collapse;
+    padding: 2px;
+    line-height: 35%
+  }
+
+  tableInternap,
+  th.tableInternap,
+  tr.tableInternap {
+    border: solid 1px transparent;
+    border-collapse: collapse;
+    padding: 2px;
+    line-height: 35%
+  }
+
+  .cuadradocenter {
+    width: 110px;
+    height: 17px;
+    border: 1px solid #525252;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .cuadrado {
+    width: 110px;
+    height: 7px;
+    border: 1px solid #525252;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: thin;
+
+  }
+
+  input[type=checkbox]:not(old) {
+    /* El input */
+  }
+
+  input[type=checkbox]:not(old):checked {
+    /* El input en estado seleccionado */
+  }
+
+  input[type=checkbox]:not(old)+label {
+    /* Label */
+  }
+</style>
+<section>
+  <table width="550px">
+    <tr>
+      <th colspan="2"
+        style="border-top: 1px solid transparent;border-left: 1px solid transparent;border-right: 1px solid transparent;border-bottom: 1px solid transparent; color: black">
+        <div class="lettertitle" style="text-align: center;">OPERACIONES</div>
+
+      </th>
+      <th colspan="6"
+        style="border-top: 1px solid transparent;border-left: 1px solid transparent;border-right: 1px solid transparent;border-bottom: 1px solid transparent; color: red">
+        <div class="lettertitle" style="text-align: left;text-align:right">ORIGINAL</div>
+
+      <th colspan="2"
+        style="border-top: 1px solid transparent;border-bottom: 1px solid transparent;border-left: 1px solid transparent;border-right: 1px solid transparent; color: #808080">
+        <div class="lettertitle" style="text-align: left;text-align:right">BILL OF LANDING</div>
+
+      </th>
+    </tr>
+  </table>
+
+  <table width="550px">
+    <tr>
+      <th colspan="3" rowspan="3" style="width:430px;height:20px;vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align: left">
+          2. EXPORTER (Principal or seller-licensee and address including ZIP Code)</div>
+        <div class="lettertitleG" style="margin-left: 2%;text-align: left">
+          </div>
+
+
+      </th>
+      <th colspan="4" style="width:170px;height:20px;vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align: left">
+          5. BOOKING NUMBER</div>
+          <div class="letter" style="margin-left: 2%;text-align: left">
+            {{numberbooking}}</div>
+      </th>
+      <th style="vertical-align:top" colspan="4">
+        <div class="letter" style="margin-left: 2%;text-align: center">5a. B/L NUMBER</div>
+      </th>
+    </tr>
+
+    <tr>
+      <th style="height:20px;border-bottom: 1px solid transparent; vertical-align:top;" colspan="4">
+        <div class="letter" style="margin-left: 2%;text-align:left">6. EXPORT REFERENCES</div>
+       
+      </th>
+      <th style="height:5px;vertical-align:top;" colspan="4">
+        <div class="letter" style="margin-left: 2%;">DATE
+          <br> {{datenow}}
+        </div>
+      </th>
+    </tr>
+    <tr>
+      <th colspan="9" style="height:20px;vertical-align:top; text-align:left">
+        <div class="lettertitleG" style="margin-left: 2%;text-align:left">{{invoices}} / {{documentt}}</div>
+      </th>
+
+
+    </tr>
+    <tr>
+      <th colspan="3" rowspan="4" style="height:20px;vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align: left">
+          3. CONSIGNED TO</div>
+        <div class="lettertitleG" style="margin-left: 2%;text-align:left"> {{nameconsignee}} <br>
+          {{addressconsignee1}} <br>
+          {{addressconsignee2}} <br>
+          {{countryconsignee}} / {{cityconsignee}}
+        </div>
+
+      </th>
+
+    </tr>
+    <tr>
+      <th style="border-bottom: 1px solid transparent; vertical-align:top;" colspan="4">
+        <div class="letter" style="margin-left: 2%;text-align:left">7. FORWARDING AGENT (Name and
+          address - references)</div>
+         
+          
+      </th>
+      <th style="vertical-align:top;" colspan="4">
+        <div class="letter" style="margin-left: 2%;">
+        </div>
+      </th>
+
+    </tr>
+    <tr>
+      <th colspan="9" style="height:20px;vertical-align:top; text-align:left">
+        <div class="lettertitleG" style="margin-left: 2%;text-align:left">{{internationalCarrier}}</div>
+
+
+      </th>
+    </tr>
+    <tr>
+      <th colspan="9" style="height:20px;vertical-align:top; text-align:left">
+        <div class="letter" style="margin-left: 2%;text-align:left">8. POINT (STATE) OF ORIGIN OR FTZ
+          NUMBER</div>
+      </th>
+    </tr>
+    <tr>
+      <th colspan="3" rowspan="2" style="height:70px;vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align: left">
+          4. NOTIFY PARTY / INTERMEDIATE CONSIGNEE (Name and address)</div>
+          <div class="lettertitleG" style="margin-left: 2%;text-align:left"> {{namenotify}} <br>
+            {{addressNotify1}} <br>
+            {{addressNotify2}} <br>
+            {{addresscountryNotify}} / {{addresscityNotify}}
+          </div>
+
+
+      </th>
+
+    </tr>
+    <tr>
+      <th style="height:20px; vertical-align:top;" colspan="9" rowspan="2">
+        <div class="letter" style="margin-left: 2%;text-align:left">9. DOMESTIC ROUTING / EXPORT
+          INSTRUCTION</div>
+      </th>
+
+
+
+    </tr>
+
+    <tr>
+      <th colspan="2" style="height:20px;vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align:left">12. PRE- CARRIAGE BY</div>
+      </th>
+      <th style="height:20px;vertical-align:top; border-right:1px solid red">
+        <div class="letter" style="margin-left: 2%;text-align:left">13. PLACE OF RECEIPT BY
+          PRE-CARRIER</div>
+        <div class="lettertitleG" style="margin-left: 2%;text-align:left"></div>
+      </th>
+    </tr>
+    <tr>
+      <th colspan="2" style="height:20px; vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align:left">14. VESSEL / VOYAGE</div>
+        <div class="lettertitleG" style="margin-left: 2%;text-align:left">{{vessel}}</div>
+
+      </th>
+      <th colspan="" style="height:20px;vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align:left">15. PORT OF LOADING / EXPORT</div>
+        <div class="lettertitleG" style="margin-left: 2%;text-align:left">{{portOfLoading}}</div>
+      </th>
+      <th colspan="9" style="height:20px;vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align:left">10. LOADING PIER / TERMINAL</div>
+      </th>
+
+    </tr>
+    <tr>
+      <th colspan="2" style="height:20px; vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align:left">16. FOREIGN PORT OF UNLOADING</div>
+        <div class="lettertitleG" style="margin-left: 2%;text-align:left">{{portOfUnloading}}</div>
+      </th>
+      <th colspan="" style="vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align:left">17. PLACE OF DELIVERY BY PRE-CARRIER</div>
+        <div class="lettertitleG" style="margin-left: 2%;text-align:left">{{incotermLocation}}</div>
+      </th>
+      <th colspan="5" style=" vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align:left">11. TYPE OF MOVE</div>
+        <div class="lettertitleG" style="margin-left: 2%;text-align:left"></div>
+      </th>
+      <th colspan="5" style="width:20px; vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align:left">12. CONTAINERIZED (VESSEL ONLY)</div>
+        <div class="wrapper">
+          <input id="option" type="checkbox" name="field" value="option" {{containerYes}}>
+          <label for="option" class="letter">Yes</label>
+          <input id="option" type="checkbox" name="field" value="option" {{containerNo}}>
+          <label for="option" class="letter">No</label>
+
+        </div></label>
+
+      </th>
+
+    </tr>
+    <tr>
+      <th colspan="" style="width:95px;vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align:center">MARKS AND NUMBERS</div>
+        <div class="letter" style="margin-left: 2%;text-align:center">(18)</div>
+         
+
+      </th>
+      <th colspan="" style="width:60px; vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align:center">NUMBER OF PACKAGES</div>
+        <div class="letter" style="margin-left: 2%;text-align:center">(19)</div>
+
+      </th>
+      <th colspan="5" style="width:0%;vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align:center">DESCRIPTION OF COMMODITIES in Schedule B
+          detail</div>
+        <div class="letter" style="margin-left: 2%;text-align:center">(20)</div>
+      </th>
+      <th colspan="3" style="vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align:center">GROSS WEIGHT</div>
+        <div class="letter" style="margin-left: 2%;text-align:center">(Kilos)</div>
+        <div class="letter" style="margin-left: 2%;text-align:center">(21)</div>
+      </th>
+      <th colspan="3" style="width:0px; vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align:center">MEASUREMENTS</div>
+        <div class="letter" style="margin-left: 2%;text-align:center">(22)</div>
+
+
+
+      </th>
+
+    </tr>
+    <tr>
+      <th colspan="" rowspan="2" style="height:210px; vertical-align: top;">
+        {{#each thepackages1}}
+        <div class="letter" style="margin-left: 2%;text-align: left;">{{packagetypes}}</div>
+        {{/each}}<br><br>
+        <div class="letterbodler" style="margin-left: 2%;text-align:right">TOTALS:</div>
+
+      </th>
+      <th colspan="" style="width:55px;height:40px; vertical-align:top">
+        {{#each thepackages1}}
+        <div class="letter" style="margin-left: 2%;text-align: left;">{{quantity}}</div>
+        {{/each}}
+
+      </th>
+      <th colspan="5" rowspan="2" style="width:190px;vertical-align:top">
+        <div class="letter" style="margin-left: 2%;text-align: left;">{{goodsDescription}}</div>
+
+
+      </th>
+      <th colspan="3" style="width:10px; vertical-align:top">
+        {{#each thepackages1}}
+        <div class="letter" style="margin-left: 2%;text-align: right;">{{weight}} {{weightUom}}</div>
+        {{/each}}
+      </th>
+      <th colspan="3" style="width:15px; vertical-align:top">
+        {{#each thepackages1}}
+        <div class="letter" style="margin-left: 2%;text-align: right;">{{volumetricWeight}} kg</div>
+        {{/each}}
+        
+      </th>
+
+    </tr>
+    <tr>
+      <th colspan="5" rowspan="1" style=" vertical-align:center">
+        <div class="letterbodler" style="margin-left: 2%;text-align:right"></div>
+
+      </th>
+      <th colspan="3" style="width:10px; vertical-align:top">
+        <div class="letterbodler" style="margin-left: 2%;text-align:right">{{totallb}} lb</div>
+      </th>
+      <th colspan="3" style="width:15px; vertical-align:top">
+        <div class="letterbodler" style="margin-left: 2%;text-align:right">{{sumVol}} kg</div>
+      </th>
+    </tr>
+    <tr>
+      <th colspan="11" rowspan="" style=" vertical-align:bottom;border-bottom:1px solid transparent">
+        <div class="letter" style="margin-left: 1%;text-align:left">Carrier has a policy payment, solicitation,
+          or receipt of any rebate, directly or indirectly, which would be unlawful under the United State
+          Shipping Act: 1984 as amended.</div>
+
+      </th>
+
+    </tr>
+    <tr>
+      <th colspan="3" rowspan="" style=" vertical-align:bottom;border-right:1px solid transparent">
+        <div class="letter" style="margin-left: 2%;text-align:left">DECLARED VALUE</div>
+
+      </th>
+      <th colspan="" rowspan="" style=" vertical-align:bottom;border-right:1px solid transparent">
+        <div class="letter" style="margin-left: 1%;text-align:left">0.00 USD</div>
+
+      </th>
+      <th colspan="7" rowspan="" style=" vertical-align:bottom">
+        <div class="letter" style="margin-left: 1%;text-align:left">READ CLAUSE 29 HEREOF CONCERNING EXTRA
+          FREIGHT AND CARRIER'S LIMITATIONS OF LIABILITY.</div>
+
+      </th>
+
+    </tr>
+  </table>
+  <table width="550px">
+    <tr>
+      <th style="vertical-align:top; border-top:1px solid transparent" rowspan="2">
+        <div class="letter" style="margin-left: 1%;text-align:left">FREIGHT RATES, CHARGES, WEIGHT AND / OR
+          MEASUREMENTS</div>
+        <table width="285px">
+          <tr>
+            <th>
+              <div class="letterbodler" style="margin-left: 1%;text-align:center">SUBJECT TO CORRECTION</div>
+            </th>
+            <th>
+              <div class="letterbodler" style="margin-left: 1%;text-align:center">PREPAID</div>
+            </th>
+            <th>
+              <div class="letterbodler" style="margin-left: 1%;text-align:center">COLLECT</div>
+            </th>
+          </tr>
+          <tr>
+            <th style="height:150px; vertical-align:top">
+              {{#each chargestotal}}
+              <div class="letter" style="margin-left: 1%;text-align:left">{{serviceDescription}}</div>
+              {{/each}}
+            </th>
+            <th style="vertical-align:top">
+              {{#each chargestotal}}
+              <div class="letter" style="margin-left: 1%;text-align:right">{{paymentprepaid}}</div>
+              {{/each}}
+            </th>
+            <th style="vertical-align:top">
+              {{#each chargestotal}}
+              <div class="letter" style="margin-left: 1%;text-align:right">{{paymentcollect}}</div>
+              {{/each}}
+            </th>
+
+          </tr>
+
+          <tr>
+            <th>
+              <div class="letterbodler" style="margin-left: 1%;text-align:center">GRAND TOTAL</div>
+            </th>
+            <th>
+              
+              <div class="letter" style="margin-left: 1%;text-align:right">{{totalprepaid}}</div>
+            </th>
+            <th>
+              <div class="letter" style="margin-left: 1%;text-align:right">{{totalcollect}}</div>
+            </th>
+
+          </tr>
+
+        </table>
+      </th>
+      <th width="274px" colspan="2" style="border-top:1px solid transparent">
+        <div class="letter" style="margin-left: 2%;text-align:justify">RECEIVED, by the Carrier as described on
+          the reverse hereof (hereinafter called the Carrier) <br>
+          from the above named shipper, the goods, or packages said to contain goods, hereinabove <br>
+          described, in apparent good order and condition unless otherwise noted hereon, to be held<br>
+          and transported subject to all written, typed, printed or stamped provisions of this bill of <br>
+          lading, on this and on the reverse side hereof, to the port or place of discharge named above <br>
+          or so near thereunto as the ship can always safely get and leave always afloat at all stages <br>
+          and conditions of water and weather and there to be delivered or transshipped on payment of <br>
+          the charges hereon
+        </div>
+        <div style="margin-left: 2%;text-align:left">
+          <span class="letter"> DATED AT : {{datenow}}</span> <span class="back-text lettertitle"
+            style="color:red;">ORIGINAL</span>
+          <hr><br>
+        </div>
+
+        <div class="letter" style="margin-left: 2%;text-align:left"> SIGNED ON BEHALF OF CARRIER <br><br>
+
+          by: {{users}}
+          <hr>
+          <br>
+        </div>
+      </th>
+
+    </tr>
+    <tr>
+
+      <th>
+        <div class="letter" style="margin-left: 2%;text-align:justify"> B/L No. <span
+            class="back-text">TLAMIA5780</span>
+          <hr>
+        </div>
+      </th>
+    </tr>
+  </table>
+</section>
+<section>
+  <div class="lettersmale">
+    <pre>
+    INTERNATIONAL OCEAN BILL OF LADING – TERMS & CONDITIONS OF CONTRACT
+    1. (a) Except as otherwise provided herein, this Bill of Lading shall have effect subject to the provisions of the Carriage of Goods by Sea Act of the United States of America, approved April 16, 1936, which shall be deemed a surrender by the Carrier of any of its rights or immunities or an increase of any of its responsibilities or liabilities under said Act. The provisions stated in said Act (except as otherwise specifically provided herein) shall govern before loading on and after discharge from the vessel and throughout the entire time the Goods are in the custody of the Carrier. If this Bill of Lading is issued or delivered in a locality where there is in force a compulsorily applicable Carriage of Goods by Sea Act, Ordinance or Statue of a nature similar to the International Convention for the Unification of Certain Rules Relating to Bills of Lading dated at Brussels, August 25, 1924, it shall be subject to the provisions of said Act, Ordinance or Statute and rules thereto annexed.
+    (b) The Carrier shall be entitled to the full benefit of, and right to, all limitations of or exceptions from, liability authorized by any provisions of Sections 4281 to 4288, inclusive, of the Revised Statues of the United States and amendments thereto and of any other provisions of the laws of the United States or of any other country whose laws shall apply.
+    2. In this bill of Lading:
+    (a) “Carrier” means and includes Carrier named on the face side hereof, the vessel, her owner, Master, operator, demise charterer, and if bound hereby, the time charterer, and any substitute Carrier whether the owner, operator, charterer or Master shall be acting as carrier or bailee.
+    (b) “Vessel” means and includes the ocean vessel on which the Goods are shipped, named on the face hereof, or any substitute vessel, also any feedership, ferry, barge, lighter or any other watercraft used by the Carrier in the performance of this contract.
+    (c) “Merchant” means and includes the shipper, the consignee, the receiver, the holder of this Bill of Lading, the owner of the Goods or person entitled to the possession of the Goods and the servants or agents of any of these.
+    (d) “Charges” means and includes freight and all expenses and money obligations incurred and payable by the Merchant.
+    (e) “Goods” means and includes the cargo received from the shipper and described on the face side hereof and any Container not supplied by or on behalf of the Carrier.
+    (f) “Container” means and includes any container, van, trailer, transportable tank, flat, pallet or any similar article of transport.
+    (g) “Person” means and includes an individual, corporation, partnership or other entity as the case may be.
+    (h) “Participating Carrier” means and shall include any other water, land or air carrier performing any stage of the Combined Transport.
+    3. It is understood and agreed that other than the said Carrier, no person whatsoever (including the Master, officers and crew of the vessel, all servants, agents, employees, representatives, and all stevedores, terminal operators, crane operators, watchmen, carpenters, ship cleaners, surveyors and other independent contractors whatsoever) is or shall be deemed to be liable with respect to the goods as carrier, bailee or otherwise howsoever, in contract or in tort. If, however, it should be adjudged that any other than said carrier is under any responsibility with respect to the Goods, all limitations of and exonerations from liability provided by law or by the terms hereof shall be available to such other persons as herein described. In contracting for the foregoing exemptions, limitations and exonerations from liability, the Carrier is acting as agent and trustee for and on behalf of all persons described above, all of whom shall to this extent be deemed to be a party to this contract evidenced by this Bill of Lading, it being always understood that the said beneficiaries are not entitled to any greater or further exemptions, limitations or exonerations from liability, than those that the Carrier has under this Bill of Lading in any given situation.
+    4. Subject to all (a)
+    (b) (c) (d) (e)
+    (f) (g)
+    rights, privileges and limitations of and exonerations from liability granted to the ocean carrier under this Bill of Lading or by law, any liability by the respective participating carriers for loss or damage to the Goods or packages carried hereunder shall be governed by the following:
+    If loss or damage occurs while the goods or packages are in the custody of the ocean carrier, only the ocean carrier shall be responsible herefore, and any liability of the ocean carrier shall be determined by the terms and conditions of this Bill of Lading and any law compulsorily applicable.
+    If loss or damage occurs while the Goods or packages are in the custody of a participating domestic or foreign Carrier, only the participating domestic or foreign Carrier(s) shall be responsible therefore, and any liability of such participating domestic or foreign Carrier(s) shall be determined, in respective order, by the terms, conditions and provisions of the applicable participating domestic or foreign Carrier’s Bill(s) of Lading, whether issued or not, tariff(s) and law compulsorily applicable in the circumstances.
+    Notwithstanding subdivision (a) and (b) hereof, it is contemplated that the Goods or packages will from time to time be carried in through transportation that will include inland transportation within the United States by Railroad and sea carriage by one or more of the other Carriers above defined (When used on or endorsed on this Bill of Lading the words “on board” shall mean and include on board the original carrying vessel when the Goods or packages are being transported from the continental United States to a foreign port or place “on board” shall mean and include on board a rail car operated by the originating carrier and enroute by rail to the port of loading for loading on board the Carrier’s or participating Carrier’s vessel).
+    If loss or damage occurs after receipt of the Goods or packages hereunder, and it cannot be determined from the records of the ocean Carrier or participating domestic or foreign Carrier(s) whether such damage or loss occurred during ocean, domestic or foreign carriage, it shall be conclusively presumed that the loss or damage occurred on board the vessel and while the Goods or packages were in the custody of the ocean Carrier.
+    At all times when the Goods or packages are in the custody of the above-mentioned participating domestic or foreign Carriers, such Carriers shall be entitled to all the rights, defenses, exceptions from or limitations of liability and immunities of whatsoever nature referred to or incorporated herein applicable or granted to the Carrier as herein defined, to the full extent permitted to such domestic and foreign Carriers under this Bill(s) of Lading, tariffs and any other laws applicable or relating thereto, provided however, that nothing contained in this Bill of Lading shall be deemed a surrender by these domestic or foreign Carriers of any of their rights and immunities or an increase of any of their limitations of and exonerations from liability under their said Bill(s) of Lading, tariffs or laws applicable or relating to said carriage.
+    In making any arrangements for transportation by participating domestic or foreign Carriers of the Goods or packages carried hereunder, either before or after ocean carriage, it is understood and agreed that the ocean Carrier acts solely as agent of the Merchant, without any other responsibility whatsoever, and it assumes no responsibility as Carrier for such domestic or foreign transportation.
+    Notice of loss or damage and claim against the ocean Carrier, where applicable, shall be given to the ocean Carrier, and suit commenced as provided for in Clauses 30 and 31 hereof. Notice of loss or damage against the participating domestic or foreign Carrier(s), where applicable, shall be filed with the participating domestic or foreign Carrier(s) and suit commenced as provided for in the terms, conditions and provisions of said Carrier(s) Bill(s) of Lading or by law applicable thereto. It is understood by the Merchant that such terms, conditions and provisions, as they pertain to notice of, and claim for, loss or damage and commencement of suit, contain different requirements than those requirements pertaining to ocean Carriage as contained in Clauses 30 and 31 hereof.
+    5. The goods carried hereunder are subject to all the terms and provisions of the Carrier’s applicable Tariff or Tariffs on file with the Federal Maritime Commission, Interstate Commerce Commission or an other regulatory body which governs a particular portion of this carriage, and the terms and provision of the said Tariff or Tariffs are hereby incorporated herein as part of the Terms and Conditions of this Bill of Lading. Copies of the relevant provisions of the applicable Tariff or Tariffs are obtainable from the Carrier, Federal Maritime Commission, Interstate Commerce Commission or other regulatory body upon request. In the event of any conflict between the terms and provisions of such Tariff or Tariffs and the Terms and Conditions of this Bill of Lading, this Bill of Lading shall prevail.
+    6. The Merchant warrants that in agreeing to the Terms and Conditions hereof, he is, or has authority of the person owning and entitled to the possession of the Goods and this Bill of Lading.
+    7. (a) the Carrier shall be entitled to sub-contract on any terms the whole or any part of the carriage, loading, unloading, storing, warehousing, handling and any and all duties whatsoever undertaken by the Carrier in relation to the Goods.
+    (b) As to through transportation, the Carrier undertakes to procure such services as necessary and shall have the right at its sole discretion to select any mode of land, sea or air transport and to arrange participation by other Carriers to accomplish the combined transport from place of receipt to place of delivery. Whenever any stage of the combined transport is accomplished
+    by any land or air Carrier or any other water Carrier, each such stage shall be controlled according to any law compulsorily applicable to such stage and according to the contracts, rules and tariffs of each participating Carrier, the same as if such contracts, rules and tariffs were fully set forth herein.
+    8. The Carrier shall be entitled but under no obligation to open any Container at anytime and to inspect the contents unless applicable law prohibits same. If it thereupon appears that the contents or any part thereof cannot safely or properly be carried or carried further, either at all or without incurring any additional expense or taking any measures in relation to the Container or its contents or any part thereof, the Carrier may abandon the transportation thereof and/or take any measures and/or incur any reasonable additional expense to carry or to continue the carriage or to store the same ashore or afloat under cover or in the open, at any place, which storage shall be deemed to constitute due delivery under this Bill of Lading. The Merchant shall indemnify the Carrier against any unreasonable additional expense so incurred.
+    9. Carrier may containerize any Goods or packages. Containers may be stowed on deck or under deck and when so stowed shall be deemed for all purposes to be stowed under deck, including for General Average and U.S. Carriage of Goods by Sea Act, 1936 and similar legislation.
+    10. Deck cargo (except goods carried in containers on deck) and live animals are received and carried solely at Merchant’s risk (including accident or mortality of animals), and the Carrier shall not in any event be liable for any loss or damage thereto arising or resulting from any matters mentioned in Section 4, Sub-Section 2(a) to (p), inclusive, of the United States Carriage of Goods by Sea Act, or from any other cause whatsoever not due to the fault of the Carrier, any warranty of seaworthiness in the premises being hereby waived, and the burden of proving liability being in all respects upon the Merchant. Except as provided above, such shipments shall be deemed Goods and shall be subject to all terms and provisions of this Bill of Lading relating to Goods.
+    11. Special containers with heating or refrigeration units will not be furnished unless contracted for expressly in writing at time of booking and, when furnished, may entail an increased freight rate or charge. Shipper shall advise Carrier of desired temperature range when delivering Goods to Carrier, and Carrier shall exercise due diligence to maintain the temperature within a reasonable range while the containers are in its custody or control. The Carrier does not, however, accept any responsibility for the functioning of heated or refrigerated containers not owned or leased by Carrier.
+    12. The scope of the voyage herein contracted for shall include usual or customary or advertised ports of call whether named in this contract or not, also ports in or out of the advertised, geographical or usual route or order, even though in proceeding thereto the vessel may sail beyond the port of discharge named herein or in a direction contrary thereto, or return to the original port, or depart from the direct or customary route and includes all canals, straits, and other waters. The vessel may call at any port for the purpose of the current, prior or subsequent voyages. The vessel may omit calling at any port whether scheduled or not, and may call at the same port more than once, may discharge the goods during the first or subsequent call at the port of discharge, may for matters occurring before or after loading, and either with or without the goods on board, and before or after proceeding towards the port of discharge, adjust compasses, dry dock with or without cargo on board, stop for repairs, shift berths, make trial trips or tests, take fuel or stores, remain in port, lie on bottom, aground or at anchor, sail with or without pilots, tow and be towed, and save or attempt to save life or property, and all of the foregoing are included in the contract voyage. The vessel may carry contraband, explosives, munitions, warlike stores, hazardous cargo, and sail armed or unarmed, and with or without convoy.
+    The Carriers sailing schedules are subject to change without notice, both as to the sailing date and date of arrival. If this is a Through Bill of Lading, no Carrier is bound to transport the shipment by any particular train, truck, aircraft, vessel or other means of conveyance, or in time for any particular market or otherwise. No Carrier shall be liable for delay and any Carrier shall have the right to forward the goods by substitute Carrier.
+    13. If at any time the performance of the contract evidenced by this Bill of Lading is or is likely to be affected by any hindrance, risk, delay, difficulty or disadvantage or whatsoever kind which cannot be avoided by the exercise of reasonable endeavors, the Carrier (whether or not the transport is commenced) may without notice to the Merchant treat the performance of this contract as terminated and place the Goods or any parts of them at the Merchant’s disposal at any place or port which the Carrier may deem safe and convenient, whereupon the responsibility of the Carrier in respect of such Goods shall cease. The Carrier shall nevertheless be entitled to full freight and charges on Goods received for transportation and the Merchant shall pay any additional costs of carriage to and delivery and storage at such place or port.
+    14. If the Carrier makes a special agreement, whether by stamp hereon or otherwise, to deliver the Goods at a specified dock or place, it is mutually agreed that such agreement shall be construed to mean that the Carrier is to make such delivery only if, in the sole judgment of the Carrier, the vessel can get to, lie at, and leave said dock or place, always safely afloat, and only if such dock or place is available for immediate receipt of the Goods and that otherwise the Goods shall be discharged as otherwise provided in this Bill of Lading, whereupon all responsibility of Carrier shall cease.
+    15. The port authorities are hereby authorized to grant a general order for discharging immediately upon arrival of the vessel and the Carrier, without giving notice either of arrival or discharge, may, immediately upon arrival of the vessel at the designated destination, discharge the goods continuously, Sundays and Holidays included at all such hours by day or by night as the Carrier may determine no matter what the state of the weather or custom of the port may be.
+    The Carrier shall not be liable in any respect whatsoever if heat or refrigeration or special cooling facilities shall not be furnished during loading or discharge or any part of the time that the Goods are upon the wharf, craft or other loading or discharging place.
+    Landing and delivery charges and pier dues shall be at the expense of the Goods unless included in the freight herein provided for. If the Goods are not taken away by the consignee by the expiration of the next working day after the Goods are at his disposal, the Goods may, at Carrier’s option and subject to Carrier’s lien, be sent to store or warehouse or be permitted to lie where landed, but always at the expense and risk of the Goods. The responsibilities of the Carrier in any capacity shall altogether cease and the Goods shall be considered to be delivered and at their own risk and expense in every respect when taken into the custody of Customs or other Authorities, or into that of any municipal or governmental concessionaire or depository. The Carrier shall not be required to give any notification of disposition of the Goods, except as may be otherwise provided in this Bill of Lading.
+    16. At ports or places where, by local law, authorities, or custom, the Carrier is required to discharge cargo to lighters or other craft, or where it has been so agreed, or where wharves are not available which the ship can get to, lie at, or leave, always safely afloat, or where conditions prevailing at the time render discharge at a wharf dangerous, imprudent, or likely to delay the vessel, the Merchant, shall promptly furnish lighters or other craft to take delivery alongside the ship, at the risk and expense of the Goods. If the Merchant, fails to provide such lighters or other craft, Carrier, acting solely as agent for the Merchant, may engage such lighters or other craft at the risk and expense of the Goods. Discharge of the Goods into such lighters or other craft shall constitute proper delivery and any further responsibility of Carrier with respect to the Goods shall thereupon terminate.
+    17. The carrier shall have liberty to comply with any order or directions or recommendations in connection with the transport under this contract of carriage given by any Government or Authority or anyone acting or purporting to act on behalf of such Government or Authority, or having, under the terms of the mortgage or insurance on the vessel or other transport, the right to give such orders, directions or recommendations. Discharge or delivery of the Goods in accordance with the said order or directions or recommendations shall be deemed a fulfillment of the contract. Any extra expense incurred in connection with the exercise of the Carrier’s liberty under this clause shall be paid by the Merchant in addition to freight and charges.
+    18. Whenever the Carrier or Master may deem it advisable, or in any case where goods are destined for port(s) or place(s) at which the vessel or participating carriers will not call, the Carrier may, without notice, forward the whole or any part of the shipment, before or after loading at the original port of shipment, or any other place or places even though outside the scope of the voyage or the route to or beyond the port of discharge or the destination of the Goods, by water, by land or by air or by any combination thereof, whether operated by the Carrier or others and whether departing or arriving or scheduled to depart or arrive before or after the ship expected to be used for the transportation of the shipment. The Carrier may delay forwarding awaiting a vessel or conveyance in its own service or with which it has established connections. In all cases where the shipment is delivered to another Carrier or to a lighter, Port Authority, warehouseman or other bailee for transshipment, the liability of this Carrier shall absolutely cease when the Goods are out of its exclusive possession and shall not resume, until the Goods again come into its exclusive possession, and the responsibility of this Carrier during any such period shall be that of an agent of the Merchant and this Carrier shall be without any other responsibility whatsoever. The carriage by any transshipping or On-Carrier and all transshipment or forwarding shall be subject to all the terms whatsoever in the regular form of Bill of Lading, consignment note, contract or other shipping document used at the time by the Carrier performing such transshipment or forwarding.
+    19. In any situation whatsoever and wheresoever occurring and whether existing or anticipated before commencement of or during the combined transport, which in the judgment of the Carrier or the Master is likely to give rise to risk of capture, seizure, detention, damage, delay or disadvantage or loss to the Carrier or any part of the Goods, to make it unsafe, imprudent or unlawful for any reason to receive, keep, load, or carry the goods, or commence or proceed on or continue the transport or to enter or discharge the goods or disembark passengers at the port of discharge, or the usual or agreed or intended place of discharge or delivery, or to give rise to delay or difficulty in proceeding by the usual or intended route, the Carrier or the Master may decline to receive, keep, load or carry the Goods or may devan container(s) contents or any part thereof and may require the Merchant to take delivery of the Goods at the place of receipt of any other point in the combined transport and upon failure to do so, may warehouse the Goods at the risk and expense of the Goods, or the vessel, whether or not proceeding towards or entering or attempting to enter a port of discharge, or reaching or attempting to reach a usual place of discharge therein or attempting to discharge the shipment, may discharge the Goods and/or devan the contents of any container(s) at another port, depot, lighter, craft, or other place, or may forward or transship them as provided in this Bill of Lading, or the Carrier or the Master may retain the Goods, vanned or unvanned, on board until the return of the vessel to the port of loading or to the port of discharge or until such time as the Carrier or the Master thinks advisable and discharge the Goods at any place whatsoever as herein provided. The Carrier or the Master is not required to give notice of such devanning or of discharge of the Goods or of the forwarding thereof as herein provided. When the Goods are discharged form the ship, as herein provided, such shall be at the risk and expense of the Goods. Such discharging shall constitute complete delivery and performance under this contract and the Carrier shall be free from any further responsibility, unless it be shown that any loss or damage to the Goods arose from Carrier’s negligence in the discharge and delivery as herein provided, the burden of establishing such negligence being on the Merchant. For any service rendered to the Goods as herein above provided or for any delay or expense to the vessel caused as a result thereof, the Carrier shall be entitled to a reasonable extra compensation, and shall have a lien on the goods for such carriage. Notice of disposition of the Goods shall be mailed to shipper or consignee named in this Bill of Lading. Goods shut out from the vessel named herein for any cause may be forwarded on a subsequent vessel of this Line or, at Carrier’s option, on a vessel of another Line or by other mode of transportation.
+    20. Notwithstanding the foregoing, the Carrier shall neither be liable therefore, nor concluded as to, the correctness of any such marks, descriptions or representation.
+    When any cargo unit owned or leased by Carrier is packed or loaded by shipper or its agent, or discharged by consignee or its agent, shipper, consignee, receiver, holder of this Bill of Lading, owners of the Goods and person entitled to the possession of the Goods shall be and remain liable, jointly and severally, for any loss or damage to the cargo unit during such loading or discharge, howsoever occurring, until the cargo unit is returned to Carrier’s custody and, at tariff rates, for any delay beyond the time allowed for such loading or discharge, and for any loss, damage or expense incurred by Carrier as a result of the failure to return the cargo unit to the Carrier in the same sound condition and state of cleanliness as when received by shipper. Such loss, damage, expense or delay shall constitute a lien on the Goods.
+    Where a cargo unit is to be unpacked or unloaded by consignee or its agent, consignee or its agent shall promptly unpack or unload such cargo unit and take delivery of its contents, irrespective of whether the Goods are damaged or not. Carrier shall not be liable for loss or damage caused to the Goods by or during such unpacking or unloading.
+    21. When containers, vans, trailers, transportable tanks, flats, palletized units, and all other packages (all hereinafter referred to generically as “cargo units”) are not packed or loaded by Carrier, such cargo units shall be deemed shipped as “Shipper’s weight, load and count”. Carrier has no reasonable means of checking the quantity, weight, condition or existence of the contents thereof, does not represent the quantity, weight, condition or existence of such contents, as furnished by the shipper and inserted in this Bill of Lading, to be accurate, and shall not be liable for nonreceipt or misdescription of such contents. Carrier shall have no responsibility or liability whatsoever therefore or for the packing, loading securing and/or stowage of contents of such cargo units, or for loss or damage caused thereby or resulting therefrom, or for the physical suitability or structural adequacy of such cargo units properly to contain their contents.
+    The Merchant, whether principal or agent, by packing or loading the cargo unit and/or by allowing the cargo unit to be so packed or loaded, represents, guarantees and warrants: (a) that the Goods are properly described, marked and safely and securely packed in their respective cargo units; that such cargo units are physically suitable, sound and structurally adequate properly to contain and support the Goods during handling and on the transport; and that the cargo units may be handled in the ordinary course without damage to them selves or to their contents, or to the vessel or conveyance or to their other cargo, or property, or persons; (b) that all particulars with regard to the cargo units and their contents, and the weight of each said cargo unit, are in all respects correct, and (c) that they have ascertained and fully disclosed in writing to the Carrier and all participating Carriers on or prior to shipments, and condition, ingredient or characteristic of the Goods which might indicate that they are inflammable, explosive, corrosive, radioactive, noxious, hazardous or dangerous in nature, or which might cause damage, injury or detriment to the Goods, or to the vessel, conveyance or other cargo or to property or persons that they have complied fully with all statues, ordinances and regulations of the Department of Transportation of the United States of America and all other regulatory bodies with respect to labeling, packaging and preparation for shipment of all such Goods.
+    The shipper, consignee, receiver, holder of this Bill of Lading, owner of the Goods and persons entitled to the possession of the Goods jointly and severally agree fully to protect and indemnify Carrier, and to hold it harmless in respect of any injury or death of any person, or loss or damage to cargo or cargo unit or any other property, or to the vessel or conveyance or expense or fine arising out of or in anyway connected with breach of any of the foregoing representations or warranties, howsoever occurring, even without fault of shipper, consignee and/or owner of the Goods, and even though such injury, death, loss or damage is caused in whole or in part by the fault of the Carrier or unseaworthiness.
+    22. The Merchant and the Goods themselves shall be liable for and shall indemnify the Carrier, and the Carrier shall have a lien on the Goods for all expenses of mending, repairing, fumigating, repacking, coopering, baling, reconditioning of the Goods and gathering of loose contents of packages; also for expenses for repairing containers damaged while in the possession of the Merchant for demurrage on containers and any payment, expense, fines, dues, duty, tax, impost, loss, damage or detention sustained or incurred by or levied upon the Carrier, vessel or conveyance in connection with the Goods, howsoever caused, including any action or requirement of any government or governmental authority or person purporting to act under the authority thereof, seizure under legal process or attempted seizure, incorrect or insufficient marking, numbering or addressing of containers, packages or description of the contents, failure of the Merchant to procure consular, Board of Health or other certificates to accompany the Goods or to comply with laws or regulations of any kind imposed with respect to the Goods by the authorities at any port or place or any act or omission of the Merchant. The Carrier’s lien shall survive delivery and may be enforced by private or public sale and without notice.
+    23. Freight shall be payable, at Carrier’s option on actual gross intake weight or measurement or on actual gross discharge weight or measurement or on a value or other basis. Freight may be calculated on the basis of the particulars of the Goods furnished by the shipper herein, but the Carrier may, as previously stated herein, at any time open the packages or containers and examine, weigh, measure and value the Goods (unless applicable law prohibits same). In case shipper’s particulars are found to be erroneous and additional freight payable, the Merchant and the Goods shall be liable for any expense incurred for examining, weighing, measuring and valuing the Goods. Full freight shall be paid on damaged or unsound goods. Full freight hereunder to place of delivery named herein and advance charges (including on-Carrier’s) shall be considered completely earned on receipt of the Goods by the Carrier, whether the freight be stated or intended to be prepaid or to be collected at destination; and the Carrier shall be entitled to all freight and charges, extra compensation, demurrage, detention, General Average, claims and any other payments made and liability incurred with respect to the Goods, whether actually paid or not, and to receive and retain them irrevocably under all circumstances whatsoever, vessel, conveyance and/or cargo lost, damaged or otherwise, or the combined transport changed, frustrated or abandoned. In case of forced abandonment or interruption of the combined transport for any cause, any forwarding of the goods or any part thereof shall be at the risk and expense of the Goods. All unpaid charges shall be paid in full, without any offset, counterclaim or deduction in the currency of the place of receipt or at Carrier’s option, in the currency of the place of delivery at the demand rate of New York exchange as quoted on day of arrival of the Goods at the place of delivery.
+    The Merchant shall be jointly and severally liable to the Carrier for the payment of all freight charges and the amounts due to the Carrier, and for any failure of either or both to perform his or their obligations under the provisions of the Bill of Lading, and they shall indemnify the Carrier against, and hold it harmless from, all liability, loss, damage an expense which the Carrier may sustain or incur arising or resulting from any such failure or performance by the Merchant. Any person, firm or corporation engaged by any party to perform forwarding services with respect to the cargo shall be considered the exclusive agent of the Merchant for all purposes and any payment of freight to such person, firm or corporation shall not be considered payment to the Carrier in any event. Failure of such person, firm or corporation to pay any part of the freight to the carrier shall be considered a default by the merchant in the payment of the freight. The Carrier shall have a lien on the Goods and any documents relating thereto, which shall survive delivery, for all freight charges and damages of any kind whatsoever, and for the costs of recovering same, including expenses incurred in preserving this lien, and may enforce this lien by public or private sale and without notice. The shipper, consignee, receiver, holder of this Bill of Lading, owner of the Goods and person entitled to the possession of the Goods shall be jointly and severally liable to the Carrier for the payment of all freight, charges and damages as aforesaid under and for the performance of this obligation of each of them hereunder.
+    24. Carrier shall not be liable for any consequential or special damages and shall have the option of replacing lost goods or repairing damaged Goods.
+    25. The Weight or quantity of any bulk cargo inserted in this Bill of Lading is the weight or quantity as ascertained by a third party other than the Carrier, and Carrier makes no representation with regard to the accuracy thereof. This Bill of Lading shall not be deemed evidence against the Carrier of receipt of goods of the weight or quantity so inserted in the Bill of Lading.
+    26. Neither the Carrier nor any corporation owned by, subsidiary to or associated or affiliated with the Carrier shall be liable to answer for or make good any loss or damage to the Goods occurring at any time and even though before loading on or after discharge from the ship, by reason or by means of any fire whatsoever, unless such fire shall be caused by its design or neglect, or by its actual fault or privity. In any case where this exemption is not permitted by law, Carriers shall not be liable for loss or damage by fire unless shown to have been caused by Carrier’s negligence.
+    27. If the vessel comes into collision with another vessel as a result of the fault or negligence of the other vessel and any act, neglect or default of the Carrier, Master, mariner, pilot or the servants of the Carrier in the navigation or in the management of the vessel, the Merchant will indemnify the Carrier against all loss or liability to the other or non-carrying vessel or her owners insofar as such loss or liability represents loss of, or damage to, or any claim whatsoever of the Merchant, paid or payable by the other or non-carrying vessel or her owners to the Merchant and set-off, recouped or recovered by the other or non-carrying vessel or her owners as part of their claim against the carrying vessel or Carrier.
+    The foregoing provisions shall also apply where the owners, operators or those in charge of any vessel or vessels or objects other than, or in addition to, the colliding vessels or objects are at fault in respect of a collision, contact, stranding or other accident.
+    This provision is to remain in effect in other jurisdictions even if unenforceable in the Courts of the United States of America.
+    28. General average shall be adjusted, stated and settled according to York-Antwerp Rules 1974, except Rule XII thereof, at such port or place as may be selected by the Carrier and as to matters not provided for by these Rules, according to the laws and usages of New York.
+    In such adjustment, disbursements in foreign currencies shall be exchanged into United States money at the rate prevailing on the dates made and allowance for damage to cargo claimed in foreign currency shall be converted at the rate prevailing on the last day of discharge at the port or place of final discharge of such damaged cargo from the ship. Average agreement or bond and such additional security as may be required by the Carrier must be furnished before delivery of the goods. Such cash deposit as the Carrier or his agents may deem sufficient as additional security for the contribution of the goods and for any salvage and special charges thereon shall, if required, be made by the Goods, shippers, consignees or owners of the goods to the Carrier before delivery of the Goods. Notwithstanding anything hereinbefore contained, such shall at the option of the Carrier by payable in United States currency and be remitted to the adjuster pending settlement of the General Average and refunds of credit balances, if any, shall be paid in United States currency. In addition to the circumstances dealt with in the 1974 York-Antwerp Rules, it is agreed that if the Carrier has used due diligence in the stowage of cargo and if the safe prosecution of the voyage is thereafter imperiled in consequence of the disturbance of stowage, the costs of handling, discharge, reloading and restowing cargo shall be allowed in General Average, even though the handling of cargo is not necessary for the purpose of effecting repairs to the vessel.
+    In the event of accident, danger or disaster, before or after commencement of the voyage resulting from any cause whatsoever either due to negligence or not, for which, or for the consequence of which, the Carrier is not responsible by statute, contract or otherwise, the Goods, the shipper, consignee, receiver, holder of the Bill of Lading, owner of the Goods and person entitled to the possession of the Goods, jointly and severally, shall contribute with the Carrier in General Average to the payment of any sacrifices, losses or expenses, of a General Average nature that may be made or incurred and shall pay salvage and special charges incurred in respect of the Goods. If a salving ship is owned or operated by the Carrier, salvage shall be paid for as fully and in the same manner as if such salving ship or ships were owned or operated by strangers. Cargo’s contribution in General Average shall be paid to the shipowner even when such average is the result of fault, neglect or error of the Master, pilot, officers or crew. The Merchant expressly renounces any and all codes, statues, laws or regulations which might otherwise apply.
+    29. In case of any loss of damage to or in connection with Goods exceeding in actual value the equivalent of $500.00 lawful money of the United States, per package, or in case of Goods not shipped in packages, per shipping unit, the value of the Goods shall be deemed to be $500.00 per package or per shipping unit. The Carrier’s liability, if any, shall be determined on the basis of a value or $500.00 per package or per shipping unit or pro rata in case of partial loss or damage, unless the nature of the Goods and a valuation higher than $500.00 per package or per shipping unit shall have been declared by the shipper before shipment and inserted in this Bill of Lading, and extra freight paid if required. In such case, if the actual value of the Goods per package or per shipping unit shall exceed such declared value, the value shall nevertheless be deemed to be declared value and the Carrier’s liability, if any, shall not exceed the declared value and any partial loss or damage shall be adjusted pro rata on the basis of such declared value. The words “shipping unit” shall mean each physical unit or piece of cargo not shipped in a package, including articles or things of any description whatsoever, except goods shipped in bulk, and irrespective of the weight or measurement unit employed in calculating freight charges.
+    Where containers, vans, trailers, transportable tanks, flats, palletized units and other such packages are not packed by the Carrier, each individual such container, van, trailer, transportable tank, palletized unit and other such package including in each instance its contents, shall be deemed a single package and Carrier’s liability limited to $500.00 with respect to each such
+    package.
+    30. As to loss or damage to the Goods or packages occurring or presumed to have occurred during ocean voyage, unless notice of loss of or damage and the general nature of it be given in writing to the Carrier or its agent at the port of delivery before or at the time of the removal of the Goods or packages into the custody of the person entitled to delivery thereof under this Bill of Lading or, if the loss or damage be not apparent, within three consecutive days after delivery at the port of discharge, such removal shall be primafacie evidence of the delivery by the Carrier of the Goods or packages as described in this Bill of Lading.
+    31. As to loss or damage to the Goods or packages occurring or presumed to have occurred during ocean carriage, the Carrier and the vessel shall be discharged from all liability in respect of loss, damage, misdelivery, delay or in respect of any other breach of this contract and any claim whatsoever with respect to the Goods or packages, unless suit is brought within one year after delivery of the Goods or package or the date when the Goods or package should have been delivered. Suit shall not be deemed brought unless jurisdiction shall have been obtained over the Carrier and/or the vessel by service of process or by an agreement to appear
+    .
+    32. Gold, silver, specie, bullion or other valuables, including those named or described in Sec. 4281 of the Revised Statues of the United Sates, will not be received by the Carrier unless their true character and value are disclosed to the Carrier and a special written agreement therefore has been made in advance, and will not, in any case, be loaded or landed by the Carrier. No such
+    valuables shall be considered received by or delivered to the Carrier until brought aboard the ship by the shipper and put in the actual possession of and written receipt therefor is given by the Master or other officer in charge. Such valuables will only be delivered by the Carrier aboard the ship on presentation of bills of lading properly endorsed and upon such delivery on board the Carrier’s responsibility shall cease. If delivery is not so taken promptly after the ship’s arrival at the port of discharge, the goods may be retained aboard or landed or carried on, solely at the risk and expense of the goods.
+    33. It is agreed that superficial rust, oxidation or any like condition due to moisture, is not a condition of damage but is inherent to the nature of the cargo; and acknowledgement of receipt of the Goods in apparent good order and condition is not a representation that such conditions of rust, oxidation and the like did not exist on receipt.
+    34. Nothing in this Bill of Lading shall operate to deprive the Carrier of any statutory protection or exemption from, or limitation of, liability, contained in the laws of the United States, or in the laws of any other country which may be applicable. This Bill of Lading shall be construed according to the laws of the United States and the Merchant agrees that any suits against the Carrier shall be brought in the Federal Courts of the United States. The terms of this Bill of Lading shall be separable, and if any part or term hereof shall be held invalided, such holding shall not affect the validity or enforceability of any other part or term hereof.
+    
+  </pre>
+  </div>
+</section>
+
+</html>

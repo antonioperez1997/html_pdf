@@ -16,7 +16,8 @@ app.use('/pdf/v1/getPdf', async function (req, res) {
             return value === 0
         })
         const promise = new Promise((resolve, reject) => {
-            const source = fs.readFileSync(template, "utf8");
+            console.log("Template::", template);
+            const source = fs.readFileSync('./template/'+template, "utf8");
             const html = Handlebars.compile(source)(data);
             
             pdf.create(html, {

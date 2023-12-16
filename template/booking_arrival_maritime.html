@@ -1,0 +1,585 @@
+<html>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+   
+        .no-break {
+            page-break-inside: avoid;
+        }
+   
+        .no-breaks {
+            page-break-before: always;
+        }
+   
+        .page {
+            counter-reset: page;
+        }
+   
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            margin-top: -2%;
+            margin-left: 40%;
+            /* left: 40%;
+           bottom: 5%; */
+            size: 30%;
+        }
+   
+        .logo {
+            margin-left: 2%;
+            margin-top: -2%;
+            display: block;
+        }
+   
+        .logodawipo {
+            width: 50%;
+            margin-left: 85%;
+            margin-top: 40%;
+        }
+   
+        .letterc {
+            margin-left: 2%;
+            margin-top: 2%;
+        }
+   
+        .letterr {
+            margin-left: 70%;
+            margin-top: -5%;
+        }
+   
+        .letter {
+            font-size: 55%;
+        }
+   
+        .lettertitle {
+            font-size: 80%;
+            font-weight: bolder;
+        }
+   
+        .marca {
+            opacity: 0.11;
+            filter: alpha(opacity=50);
+            position: fixed;
+        }
+   
+        .dec {
+            text-decoration-line: overline underline line-through;
+        }
+   
+        table,
+        th,
+        tr {
+            border: solid 1px #dbdfe5;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+   
+        .container {
+            margin-top: -1%;
+        }
+   
+        .no_borde {
+            border: transparent;
+        }
+   
+        .interlineado {
+            line-height: 7px
+        }
+        .interlineadoprinted {
+            line-height: 10px
+        }
+        .encabezado {
+                background-color: {{colors}};
+                color:white;
+            }
+   
+        th.celda-fija {
+            width: 275px;
+            z-index: 1;
+            /* Asegura que las celdas fijas estén por encima del contenido */
+        }
+   
+        th.anchoins {
+            height: 60px;
+        }
+   
+        .front-text {
+            float: left;
+            /* Otros estilos que desees aplicar */
+        }
+   
+        .back-text {
+            float: right;
+            right: 20px
+                /* Otros estilos que desees aplicar */
+        }
+   
+        .bordertnsp {
+            border-bottom: 1px solid transparent;
+            border-top: 1px solid transparent;
+        }
+   
+        .bordertnsright {
+            border-right: 1px solid transparent;
+        }
+      th.celda-fijath {
+        width: 90px;
+            z-index: 1;
+            /* Asegura que las celdas fijas estén por encima del contenido */
+        }
+      th.celda-fijatax {
+            width: 66px;
+            z-index: 1;
+            /* Asegura que las celdas fijas estén por encima del contenido */
+        }
+      th.celda-fijatotal {
+            width: 97px;
+            z-index: 1;
+            /* Asegura que las celdas fijas estén por encima del contenido */
+        }
+    </style>
+    <section>
+   
+        <head style="padding-left: 1%;padding-right:2%">
+            <div id="pageHeader">
+                <div class="lettertitle" style="margin-left: 2%; text-align: center;">ARRIVAL NOTICE<br> {{numberbooking}}</div> <br>
+                <table width=100% class='no_borde'>
+                    <tr class='no_borde'>
+                        <td width="73%">
+                            <div class="logo">
+                                <img style="width: 20%;" src="data:image/{{typeimagednc}};base64,{{imageenc}}" />
+                            </div>
+                            <div class="interlineadoprinted">
+                                <span class="letter letterc">Printed On: {{datenow}}</span>
+                                <br>
+                                <span class="letter letterc">Printed By: {{users}}</span>
+                            </div>
+                        </td>
+                        {{complheader}}
+                    </tr>
+                </table>
+            </div>
+        </head>
+        <br>
+   
+        <body class="container" style="padding-left: 1%;padding-right:2%;text-align:left">
+            <table width="550px" style="text-align:left">
+                <tr class="encabezado">
+                    <th colspan="2" class="celda-fija">
+                        <div class="letter" style="margin-left: 2%;">SHIPPER</div>
+                    </th>
+                    <th colspan="2" class="celda-fija">
+                        <div class="letter" style="margin-left: 2%;">ADDITIONAL INFORMATION</div>
+                    </th>
+                </tr>
+                <tr class='no_borde'>
+                    <th colspan="2" rowspan="4" style="vertical-align: top;" class="anchoins">
+                        <div class="letter" style="margin-left: 2%;">{{nameshipper}} <br>
+                            {{addreshipper1}} <br>
+                            {{addreshipper2}} <br>
+                            {{countryshipper}} / {{cityshipper}}
+                        </div>
+   
+                    </th>
+                    <th colspan="2" class="bordertnsp">
+                        <div class="letter" style="margin-left: 2%;">SHIPMENT # : {{shipmentNumber}}</div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" class="bordertnsp">
+                        <div class="letter" style="margin-left: 2%">MBL #: {{mbl}}</div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" class="bordertnsp">
+                        <div class="letter" style="margin-left: 2%;">HBL #: {{hbl}}</div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" class="bordertnsp">
+                        <div class="letter" style="margin-left: 2%;">VOYAGE: {{voyage}}</div>
+                    </th>
+                </tr>
+   
+   
+                <tr class="encabezado">
+                    <th rowspan="2" colspan="2">
+                        <div class="letter" style="margin-left: 2%;">CONSIGNEE</div>
+                    </th>
+                </tr>
+                <tr>
+                    <th  class="bordertnsptop bordertnsp bordertnsright">
+                        <div class="letter" style="margin-left: 2%;">VESSEL: {{vessel}}</div>
+                    </th>
+                    
+                </tr>
+   
+   
+   
+                <tr>
+                    <th style="vertical-align:text-top" class="anchoins" colspan="2" rowspan="4">
+                        <div class="letter" style="margin-left: 2%;">{{nameconsignee}} <br>
+                            {{addressconsignee1}} <br>
+                            {{addressconsignee2}} <br>
+                            {{cityconsignee}} / {{cityshipper}}
+                        </div>
+                    </th>
+                     <th colspan="2" class="bordertnsp">
+                        <div class="letter" style="margin-left: 2%;">CUSTOMER REF #: </div>
+                    </th>
+                    
+   
+                </tr>
+                <tr>
+                    <th colspan="2" class="bordertnsp">
+                        <div class="letter" style="margin-left: 2%;">TRUCKING COMPANY: </div>
+                    </th>
+   
+                </tr>
+                <tr>
+                    <th class="bordertnsp bordertnsright">
+                        <div class="letter" style="margin-left: 3%;">ENTRY #: </div>
+                    </th>
+                    <th class="bordertnsp">
+                        <div class="letter" style="margin-left: 2%;">ENTRY DATE : </div>
+                    </th>
+   
+                </tr>
+                <tr>
+                    <th class="bordertnsp bordertnsright">
+                        <div class="letter" style="margin-left: 3%;">AVAILABLE: </div>
+                    </th>
+                    <th class="bordertnsp">
+                        <div class="letter" style="margin-left: 2%;">EXPIRED: </div>
+                    </th>
+                </tr>
+   
+                <tr class="encabezado">
+                    <th colspan="2" rowspan="2">
+                        <div class="letter">NOTIFY PARTY</div>
+                    </th>
+   
+                </tr>
+                <tr>
+                    <th class="bordertnsp bordertnsright">
+                        <div class="letter" style="margin-left: 3%;">CCN/AMS #:  </div>
+                    </th>
+                    <th class="bordertnsp">
+                        <div class="letter" style="margin-left: 2%;">AMS DATE:</div>
+                    </th>
+                </tr>
+   
+                <tr>
+                    <th style="vertical-align:text-top" class="anchoins" colspan="2" rowspan="4">
+                        <div class="letter" style="margin-left: 2%;">{{namenotify}} <br>
+                            {{addressNotify1}} <br>
+                            {{addressNotify2}} <br>
+                            {{addresscountryNotify}} / {{addresscityNotify}}
+                        </div>
+                    </th>
+                   <th class="bordertnsp bordertnsright">
+                        <div class="letter" style="margin-left: 3%;">GO #: </div>
+                    </th>
+                    <th class="bordertnsp">
+                        <div class="letter" style="margin-left: 2%;">GO DATE:</div>
+                    </th>
+                    
+   
+   
+                </tr>
+                <tr>
+                    <th class="bordertnsp bordertnsright">
+                        <div class="letter" style="margin-left: 3%;">IT #: </div>
+                    </th>
+                    <th class="bordertnsp">
+                        <div class="letter" style="margin-left: 2%;">IT DATE: </div>
+                    </th> 
+                </tr>
+                <tr>
+                   <th class="bordertnsp bordertnsright ">
+                        <div class="letter" style="margin-left: 3%;">BY #: {{users}} </div>
+                    </th>
+                    <th class="bordertnsp">
+                        <div class="letter" style="margin-left: 2%;">EMAIL: cservice@vml-sa.com</div>
+                    </th>
+                   
+                </tr>
+               <tr>
+                   <th class="bordertnsright">
+                       <div class="letter" style="margin-left: 2%;color:white">BY: </div>
+                    </th>
+                    <th class="">
+                        
+                    </th>
+                </tr>
+   
+   
+                <tr class="encabezado">
+                    <th rowspan="2" colspan="2">
+                        <div class="letter" style="margin-left: 2%;">BROKER</div>
+                    </th>
+                </tr>
+                <tr>
+                   <th class="encabezado">
+                        <div class="letter" style="margin-left: 2%;">PORT OF LOADING</div>
+                    </th>
+                    <th class="encabezado">
+                        <div class="letter" style="margin-left: 2%;">ETD</div>
+                    </th>
+                </tr>
+   
+                <tr>
+                    
+                    <th style="vertical-align:text-top" class="anchoins" colspan="2" rowspan="4">
+                        {{#each broker}}
+                        <div class="letter" style="margin-left: 2%;">{{broker}} <br>
+   
+                        </div>
+                        {{/each}}
+                     </th>
+                    
+                      <th clas="celda-fijafo">
+                        <div class="letter" style="margin-left: 2%;">{{portOfLoading}}</div>
+                    </th>
+                    <th>
+                        <div class="letter" style="margin-left: 2%;">{{etd}}</div>
+                    </th>
+   
+                    
+                </tr>
+                <tr>
+                    <th class="encabezado">
+                        <div class="letter" style="margin-left: 2%;">PORT OF UNLOADING</div>
+                    </th>
+                    <th class="encabezado">
+                        <div class="letter" style="margin-left: 2%;">ETA</div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                    <div class="letter" style="margin-left: 2%;">{{portOfUnloading}}</div>
+                </th>
+                <th>
+                    <div class="letter" style="margin-left: 2%;">{{eta}}</div>
+                </th>  
+   
+                </tr>
+                  <tr>
+                   <th class="bordertnsright">
+                       <div class="letter" style="margin-left: 2%;color:white">BY: </div>
+                    </th>
+                    <th class="">
+                        
+                    </th>
+                </tr>
+              
+                
+                <tr class="encabezado">
+                    <th rowspan="1" colspan="2">
+                        <div class="letter" style="margin-left: 2%;">FREIGHT LOCATION</div>
+                    </th>
+                  <th>
+                        <div class="letter" style="margin-left: 2%;">PLACE OF DELIVERY</div>
+                    </th>
+                    <th>
+                        <div class="letter" style="margin-left: 2%;">ETA</div>
+                    </th>
+                    
+                </tr>
+                <tr>
+                    <th style="vertical-align:text-top" class="anchoins" colspan="2" rowspan="4">
+                        <div class="letter" style="margin-left: 2%;">{{incotermLocation}}
+                        </div>
+                    </th>
+                    <th>
+                        <div class="letter" style="margin-left: 2%;"></div>
+                    </th>
+                    <th>
+                        <div class="letter" style="margin-left: 2%;">{{eta}}</div>
+                    </th>
+                   
+                </tr>
+               
+                <tr>
+                  <th class="encabezado">
+                        <div class="letter" style="margin-left: 2%;">FINAL DESTINATION</div>
+                    </th>
+                    <th class="encabezado">
+                        <div class="letter" style="margin-left: 2%;">ETA</div>
+                    </th>
+                    
+                </tr>
+                          <tr>
+                            <th>
+                        <div class="letter" style="margin-left: 2%;"></div>
+                    </th>
+                    <th>
+                        <div class="letter" style="margin-left: 2%;">{{eta}}</div>
+                    </th>
+                          </tr>
+                          <tr>
+                   <th class="bordertnsright" style="border-top: 1px solid transparent;">
+                       <div class="letter" style="margin-left: 2%;color:white">BY: </div>
+                    </th>
+                    <th class="">
+                        
+                    </th>
+                </tr>
+            </table>
+            <br>
+            <table width="550px" style="text-align:left">
+                <tr>
+                    <th class="encabezado" >
+                     <div class="letter" style="margin-left: 2%;text-align: left;">MARKS / NUMBERS</div>
+                    </th>
+                    <th class="encabezado">
+                     <div class="letter" style="margin-left: 2%;text-align: left;">PCS</div>
+                    </th>
+                    <th  class="encabezado" colspan="2">
+                     <div class="letter" style="margin-left: 2%;text-align: left;">DESCRIPTION OF COMMODITY</div>
+                    </th>
+                    <th class="encabezado celda-fijath" style="text-align: left" >
+                     <div class="letter" style="margin-left: 2%;">GROSS WEIGHT</div>
+                    </th>
+                    <th class="encabezado celda-fijath" style="text-align: left">
+                     <div class="letter" style="margin-left: 2%;">VOLUMEN WEIGHT</div>
+                    </th>
+                </tr>
+                  {{#each thepackages1}}
+                <tr>
+                <th>
+                    <div class="letter" style="margin-left: 2%;text-align: left;">{{packagetypes}}</div>
+                </th>
+                    <th>
+                    <div class="letter" style="margin-left: 2%;text-align: left;">{{quantity}}</div>
+                </th>
+                    <th colspan="2">
+                        <div class="letter" style="margin-left: 2%;text-align: left;">{{../this.goodsDescription}}</div>
+                        
+                </th>
+                    <th>
+                    <div class="letter" style="margin-left: 2%;text-align: right;">{{weight}} {{weightUom}}</div>
+                </th>
+                <th>
+                    <div class="letter" style="margin-left: 2%;text-align: right;">{{volumetricWeight}}</div>
+                </th>
+                </tr>
+                  {{/each}}
+                <tr>
+                <th colspan="2" style="border-bottom: 1px solid transparent;border-left: 1px solid transparent;border-right: 1px solid transparent">
+                    <div class="letter" style="margin-left: 2%;"></div>
+                </th>
+                  <th class="celda-fijatotal" style="border-bottom: 1px solid transparent;border-left: 1px solid transparent;">
+                    <div class="letter" style="margin-left: 2%;text-align: right;"></div>
+                </th>
+                <th class="encabezado">
+                    <div class="letter" style="margin-left: 2%;text-align: right;">TOTALS</div>
+                </th>
+                <th >
+                    <div class="letter" style="margin-left: 2%;text-align: right;">{{totallb}} lb</div>
+                </th>
+                <th >
+                    <div class="letter" style="margin-left: 2%;text-align: right;">{{sumVol}} kg</div>
+                </th>
+                
+                </tr>
+            </table>
+            <br>
+            <div class="no-break">
+                <table width="550px" style="text-align:left">
+                    <tr>
+                        <th class="encabezado">
+                         <div class="letter " style="margin-left: 2%;text-align: left;">DESCRIPTION OF CHARGES <span class="back-text">(USD)</span></div>
+                       
+                        </th>
+                        <th class="encabezado celda-fijatax">
+                         <div class="letter" style="margin-left: 2%;text-align: right;">TAX RATE %</div>
+                        </th>
+                        <th class="encabezado celda-fijatax">
+                         <div class="letter" style="margin-left: 2%;text-align: right;">TAX AMOUNT</div>
+                        </th>
+                        <th class="encabezado">
+                         <div class="letter" style="margin-left: 2%;text-align: right;">PREPAID</div>
+                        </th>
+                        <th class="encabezado">
+                         <div class="letter" style="margin-left: 2%;text-align: right;">COLLECT</div>
+                        </th>
+                      </tr>
+                      {{#each chargestotal}}
+                      <tr>
+                        <th>
+                          <div class="letter" style="margin-left: 2%;text-align: left;">{{serviceDescription}}</div>
+                        </th>
+                        <th>
+                          <div class="letter" style="margin-left: 2%;text-align: right;"></div>
+                        </th>
+                        <th>
+                          <div class="letter" style="margin-left: 2%;text-align: right;"></div>
+                        </th>
+                        <th>
+                          <div class="letter" style="margin-left: 2%;text-align: right;">{{paymentprepaid}}</div>
+                        </th>
+                        <th>
+                          <div class="letter" style="margin-left: 2%;text-align: right;">{{paymentcollect}}</div>
+                        </th>
+                      </tr>
+                      {{/each}}
+                      
+                      <tr>
+                        <th style="border-bottom: 1px solid transparent;border-left: 1px solid transparent;">
+                          <div class="letter" style="margin-left: 2%;"></div>
+                        </th>
+                        <th colspan="2" class="encabezado">
+                          <div class="letter" style="margin-left: 2%;">TOTALS <span class="back-text">(USD)</span></div>
+                          
+                        </th>
+                        <th style="text-align:right">
+                          <div class="letter" style="margin-left: 2%;text-align: right;">{{totalprepaid}}</div>
+                        </th>
+                        <th style="text-align:right">
+                          <div class="letter" style="margin-left: 2%;text-align: right;">{{totalcollect}}</div>
+                        </th>
+                        
+                      </tr>
+                </table>
+
+            </div>
+            
+            <br>
+            <table width="550px" style="text-align:left" class="no-break">
+                <tr class="encabezado">
+                    <th colspan="2">
+                      <div class="letter" style="margin-left: 2%;">COMMENTS</div>
+                    </th>
+        
+                    </tr>
+                    
+                    <tr class="letter">
+                      <th>
+                        <div style="margin-left: 2%;"></div>
+                      </th>
+                     
+                    </tr>
+            </table>
+            <div id="pageFooter" stye="text-align:right">
+                <table class="no-border" style="margin-left:1%;width: 98%; border: solid 5px white;">
+                    <tr>
+                        <td style="text-align: right;">
+                        <span style="font-size: 40%;">POWERED BY</span>
+                        <img style="width: 10%;margin-right:4%;margin-bottom: -1%;" src="data:image/{{typeimagedaw}};base64,{{imagendaw}}" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </body>
+   
+   
+   
+        
+    </section>
+   
+    </html>

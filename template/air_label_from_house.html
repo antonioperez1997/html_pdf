@@ -1,0 +1,383 @@
+<html>
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+    }
+
+    .no-break {
+        page-break-inside: avoid;
+    }
+
+    .no-breaks {
+        page-break-before: always;
+    }
+
+    .page {
+        counter-reset: page;
+    }
+
+    .arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        margin-top: -2%;
+        margin-left: 40%;
+        /* left: 40%;
+        bottom: 5%; */
+        size: 30%;
+    }
+
+    .logo {
+
+        display: block;
+    }
+
+    .logodawipo {
+        width: 50%;
+        margin-left: 85%;
+        margin-top: 40%;
+    }
+
+    .letterc {
+        margin-left: 2%;
+        margin-top: 2%;
+    }
+
+    .letterr {
+        margin-left: 55%;
+        margin-top: -5%;
+    }
+
+    .letter {
+        font-size: 46%;
+    }
+
+    .letterbodler {
+        font-size: 35%;
+        font-weight: bolder;
+    }
+
+    .lettertitle {
+        font-size: 47%;
+        font-weight: bolder;
+    }
+
+    .lettertitleG {
+        font-size: 56%;
+    }
+
+    .marca {
+        opacity: 0.11;
+        filter: alpha(opacity=50);
+        position: fixed;
+    }
+
+    .dec {
+        text-decoration-line: overline underline line-through;
+    }
+
+    table,
+    th,
+    td,
+    tr {
+        border: solid 1px #525252;
+        border-collapse: collapse;
+        padding: 2px;
+        border-width: thin;
+    }
+
+    td[rowspan="2"]:first-child {
+        border-right: 1px solid black;
+    }
+
+    td[rowspan="2"]:last-child {
+        border-left: 1px solid black;
+    }
+
+    .container {
+        margin-top: -1%;
+    }
+
+    .no_borde {
+        border: transparent;
+    }
+
+    th.ancho {
+        height: 75px;
+    }
+
+    th.anchop {
+        height: 93px;
+    }
+
+    th.anchoinf {
+        height: 65px;
+    }
+
+    th.anchoto {
+        height: 40px;
+    }
+
+    th.anchoairp {
+        height: 26px;
+    }
+
+    th.anchodf {
+        height: 30px;
+    }
+
+    th.anchoins {
+        height: 30px;
+    }
+
+
+
+    th.widthinstble {
+        width: 275px;
+    }
+
+    th.widthins {
+        width: 137px;
+    }
+
+    .cuadradon {
+        width: 110px;
+        height: 13px;
+        border: 1px solid #525252;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .lettersmall {
+        font-size: 35%;
+    }
+
+    .lettersmale {
+        font-size: 32%;
+    }
+
+
+    th.gray {
+        background: #d3d3d3
+    }
+
+    .back-text {
+        float: right;
+        right: 20px
+            /* Otros estilos que desees aplicar */
+    }
+
+    .tableTo,
+    th.tableTo,
+    td.tableTo,
+    tr.tableTo {
+        border-top: solid 1px transparent;
+        border-bottom: solid 1px transparent;
+    }
+
+    tableInterna,
+    th.tableInterna,
+    tr.tableInterna {
+        border: solid 1px transparent;
+        border-collapse: collapse;
+        padding: 2px;
+        line-height: 35%
+    }
+
+    tableInternap,
+    th.tableInternap,
+    tr.tableInternap {
+        border: solid 1px transparent;
+        border-collapse: collapse;
+        padding: 2px;
+        line-height: 35%
+    }
+
+    .cuadradocenter {
+        width: 110px;
+        height: 17px;
+        border: 1px solid #525252;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .cuadrado {
+        width: 110px;
+        height: 7px;
+        border: 1px solid #525252;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        border-width: thin;
+
+    }
+
+    input[type=checkbox]:not(old) {
+        /* El input */
+    }
+
+    input[type=checkbox]:not(old):checked {
+        /* El input en estado seleccionado */
+    }
+
+    input[type=checkbox]:not(old)+label {
+        /* Label */
+    }
+</style>
+{{#each infoDetaol}}
+
+   
+<section class="no-break">
+    <table width="100%" class="no_borde" style="line-height:6px">
+        <tr class="no_borde" style="vertical-align:top">
+            <th colspan="2" class="no_borde" style="vertical-align:top">
+                <div class="lettertitle" style="text-align: center;">Vanguard Medical Logistics</div><br>
+    
+            </th>
+        </tr>
+    
+        <tr class="no_borde">
+            <th colspan="2" class="no_borde" style="vertical-align:top">
+                <div class="letter" style="text-align: center;">Panamerica Corporate Center</div>
+    
+            </th>
+        </tr>
+        <tr class="no_borde">
+            <th colspan="2" class="no_borde" style="vertical-align:top">
+                <div class="letter" style="text-align: center;">Bodega 9095, Panamá Pacífico</div>
+    
+            </th>
+        </tr>
+        <tr class="no_borde">
+            <th colspan="2" class="no_borde" style="vertical-align:top">
+                <div class="letter" style="text-align: center;">cservice@vml-sa.com</div>
+    
+            </th>
+        </tr>
+    </table>
+    
+    <br>
+    
+    <table width="100%">
+        <tr>
+            <th colspan="3"
+                style="border-left: 1px solid transparent;border-right: 1px solid transparent; color: black; vertical-align:top"
+                class="anchoins">
+                <div class="lettertitle" style="text-align: left;">SHIPPER</div>
+                <div class="letter" style="margin-left: 2%;text-align: left;">{{../this.nameshipper}} <br>
+                    {{../this.addreshipper1}} <br>
+                    {{../this.addreshipper2}} <br>
+                    {{../this.countryshipper}} / {{../this.cityshipper}}
+                </div>
+    
+            </th>
+        </tr>
+        <tr>
+            <th colspan="3"
+                style="border-top: 1px solid transparent;border-left: 1px solid transparent;border-right: 1px solid transparent;vertical-align:top"
+                class="anchoins">
+                <div class="lettertitle" style="text-align:left">CONSIGNEE</div>
+                <div class="letter" style="margin-left: 2%;text-align: left;">{{../this.nameconsignee}} <br>
+                    {{../this.addressconsignee1}} <br>
+                    {{../this.addressconsignee2}} <br>
+                    {{../this.countryconsignee}} / {{../this.cityconsignee}}
+                </div>
+    
+            </th>
+        </tr>
+        <tr>
+    
+            <th colspan="2"
+                style="border-top: 1px solid transparent;border-bottom: 1px solid transparent;border-left: 1px solid transparent;border-right: 1px solid transparent;vertical-align:top"
+                class="anchodf">
+                <div class="lettertitle" style="text-align:left">AWB #</div>
+                <div class="letter" style="text-align:left">{{../this.awb}}</div>
+    
+            </th>
+            <th colspan="2"
+                style="border-top: 1px solid transparent;border-bottom: 1px solid transparent;border-left: 1px solid transparent;border-right: 1px solid transparent;vertical-align:top">
+                <div class="lettertitle" style="text-align:center">DEPARTURE: </div>
+                <div class="letter" style="text-align:center">{{../this.etd}}</div>
+    
+            </th>
+        </tr>
+    </table>
+    
+    
+    
+    <table width="100%">
+        <tr>
+            <th colspan="3"
+                style="border-left: 1px solid transparent;border-right: 1px solid transparent; color: black; vertical-align:top"
+                class="anchodf">
+                <div class="lettertitle" style="text-align: left;">SHIPMENT #</div>
+                <div class="lettertitle" style="text-align: center;font-size:25px">{{../this.shipmentNumber}}</div>
+    
+            </th>
+        </tr>
+    </table>
+    <table width="100%">
+        <tr>
+            <th colspan="3"
+                style="border-left: 1px solid transparent;border-right: 1px solid transparent; color: black; vertical-align:top">
+                <img src='data:image/png;base64,{{../this.barc}}' style="width:100%" />
+    
+            </th>
+        </tr>
+        <tr>
+            <th colspan="" style="border-left: 1px solid transparent; color: black; vertical-align:top" class="anchoins">
+                <div class="lettertitle" style="text-align: left;">DESTINATION</div>
+                <div class="letter" style="text-align: left;">{{../this.destinationcountry}} / {{../destinationname}}</div>
+    
+            </th>
+            <th colspan="" style="border-left: 1px solid transparent;color: black; vertical-align:top" class="anchoins">
+                <div class="lettertitle" style="text-align: left;">TOTAL WEIGHT</div>
+                <div class="letter" style="text-align: left;">{{weight}} {{weightUom}}</div>
+                
+    
+            </th>
+            <th colspan=""
+                style="border-left: 1px solid transparent;border-right: 1px solid transparent; color: black; vertical-align:top"
+                class="anchoins">
+                <div class="lettertitle" style="text-align: left;">PCS</div>
+                <div class="lettertitle" style="text-align: left;">{{countt}} of {{../this.totalfinallypackages}}</div>
+                
+    
+            </th>
+        </tr>
+        <tr>
+            <th colspan="3"
+                style="border-left: 1px solid transparent;border-right: 1px solid transparent;  border-bottom: 1px solid transparent; color: black; vertical-align:top">
+                <img src='data:image/png;base64,{{../this.barc}}' style="width:100%" />
+    
+            </th>
+        </tr>
+    </table>
+</section>
+
+
+{{/each}}
+  
+
+<div id="pageFooter" stye="text-align:right">
+    <table class="no-border" style="margin-left:1%;width: 98%; border: solid 5px white;">
+        <tr>
+            <td style="text-align: right;">
+                <span style="font-size: 40%;">POWERED BY</span>
+                <img style="width: 10%;margin-right:4%;margin-bottom: -1%;"
+                    src="data:image/{{typeimagedaw}};base64,{{imagendaw}}" />
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+</html>

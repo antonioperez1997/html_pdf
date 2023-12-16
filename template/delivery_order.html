@@ -1,0 +1,371 @@
+<html>
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+    }
+
+    .no-break {
+        page-break-inside: avoid;
+    }
+
+    .no-breaks {
+        page-break-before: always;
+    }
+
+    .page {
+        counter-reset: page;
+    }
+
+    .arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        margin-top: -2%;
+        margin-left: 40%;
+        /* left: 40%;
+           bottom: 5%; */
+        size: 30%;
+    }
+
+    .logo {
+        margin-left: 2%;
+        margin-top: -2%;
+        display: block;
+    }
+
+    .logodawipo {
+        width: 50%;
+        margin-left: 85%;
+        margin-top: 40%;
+    }
+
+    .letterc {
+        margin-left: 2%;
+        margin-top: 2%;
+    }
+
+    .letterr {
+        margin-left: 70%;
+        margin-top: -5%;
+    }
+
+    .letter {
+        font-size: 55%;
+    }
+
+    .lettertitle {
+        font-size: 80%;
+        font-weight: bolder;
+    }
+
+    .marca {
+        opacity: 0.11;
+        filter: alpha(opacity=50);
+        position: fixed;
+    }
+
+    .dec {
+        text-decoration-line: overline underline line-through;
+    }
+
+    table,
+    th,
+    tr {
+        border: solid 1px #dbdfe5;
+        border-collapse: collapse;
+        padding: 2px;
+    }
+
+    .container {
+        margin-top: -1%;
+    }
+
+    .no_borde {
+        border: transparent;
+    }
+
+    .interlineado {
+        line-height: 7px
+    }
+    .interlineadoprinted {
+            line-height: 10px
+        }
+
+    .encabezado {
+                background-color: {{colors}};
+                color:white;
+            }
+
+    th.celda-fija {
+        width: 275px;
+        z-index: 1;
+        /* Asegura que las celdas fijas estén por encima del contenido */
+    }
+
+    th.anchoins {
+        height: 60px;
+    }
+
+    .front-text {
+        float: left;
+        /* Otros estilos que desees aplicar */
+    }
+
+    .back-text {
+        float: right;
+        right: 20px
+            /* Otros estilos que desees aplicar */
+    }
+
+    .bordertnsp {
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+    }
+
+    .bordertnsright {
+        border-right: 1px solid transparent;
+    }
+
+    th.celda-fijath {
+        width: 90px;
+        z-index: 1;
+        /* Asegura que las celdas fijas estén por encima del contenido */
+    }
+
+    th.celda-fijatax {
+        width: 66px;
+        z-index: 1;
+        /* Asegura que las celdas fijas estén por encima del contenido */
+    }
+
+    th.anchoinst {
+        height: 30px;
+    }
+</style>
+<section>
+
+    <head style="padding-left: 1%;padding-right:2%">
+        <div id="pageHeader">
+            <div class="lettertitle" style="margin-left: 2%; text-align: center;">DELIVERY ORDER<br> {{numberbooking}}
+            </div> <br>
+            <table width=100% class='no_borde'>
+                <tr class='no_borde'>
+                    <td width="73%">
+                        <div class="logo">
+                            <img style="width: 20%;" src="data:image/{{typeimagednc}};base64,{{imageenc}}" />
+                        </div>
+                        <div class="interlineadoprinted">
+                            <span class="letter letterc">Printed On: {{datenow}}</span>
+                            <br>
+                            <span class="letter letterc">Printed By: {{users}}</span>
+                        </div>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <div class="interlineado">
+                            <div class="letter "
+                                style="margin-left: 2%; text-align:left; margin-right: 2%; font-weight: bolder;">
+                                Vanguard Medical Logistics</div><br>
+                            <div class="letter " style="margin-left: 2%; text-align:left; margin-right: 2%; ">Panamerica
+                                Corporate Center</div> <br>
+                            <div class="letter" style="margin-left: 2%;">Bodega 9095, Panamá Pacífico</div> <br>
+                            <div class="letter" style="margin-left: 2%;">cservice@vml-sa.com </div>
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </head>
+    <br>
+
+    <body class="container" style="padding-left: 1%;padding-right:2%;text-align:left">
+        <table width="550px" style="text-align:left">
+            <tr>
+                <th colspan="2" class="celda-fija encabezado">
+                    <div class="letter" style="margin-left: 2%;">DELIVERY CARRIER </div>
+                </th>
+                <th colspan="2" class="celda-fija"
+                    style="border-top:1px solid transparent; border-right: 1px solid transparent; border-bottom: 1px solid transparent">
+                    
+                </th>
+
+            </tr>
+            <tr class='no_borde'>
+                <th colspan="2" rowspan="6" style="vertical-align: top;" class="anchoins">
+                    <div class="letter" style="margin-left: 2%;">{{namedelivery}} <br>
+                        {{addressdelivery1}} <br>
+                        {{addressdelivery2}} <br>
+                        {{addresscountrydelivery}} / {{addresscountrycity}}
+                    </div>
+
+                </th>
+                <th colspan="2" class="bordertnsp"
+                    style="border-top:1px solid transparent;border-top:1px solid transparent; border-right: 1px solid transparent; border-bottom: 1px solid transparent">
+                    <div class="letter" style="margin-left: 2%;">SHIPMENT # : {{shipmentNumber}}</div>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2" class="bordertnsp"
+                    style="border-top:1px solid transparent; border-right: 1px solid transparent; border-bottom: 1px solid transparent">
+                    <div class="letter" style="margin-left: 2%">MAWB #: {{awb}}</div>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2" class="bordertnsp"
+                    style="border-top:1px solid transparent; border-right: 1px solid transparent; border-bottom: 1px solid transparent">
+                    <div class="letter" style="margin-left: 2%;">HAWB #: {{hawb}}</div>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2" class="bordertnsp"
+                    style="border-top:1px solid transparent; border-right: 1px solid transparent; border-bottom: 1px solid transparent">
+                    <div class="letter" style="margin-left: 2%;">FLIGHT: {{flight}}</div>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2" class="bordertnsptop bordertnsp"
+                    style="border-top:1px solid transparent; border-right: 1px solid transparent; border-bottom: 1px solid transparent">
+                    <div class="letter" style="margin-left: 2%;">ORIGIN: {{originlocation}}</div>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="" class="" style="border-top:1px solid transparent; border-right: 1px solid transparent; ">
+                    <div class="letter" style="margin-left: 2%;">DEST: {{destinationname}}</div>
+                </th>
+            </tr>
+
+
+            <tr class="encabezado">
+                <th rowspan="" colspan="2">
+                    <div class="letter" style="margin-left: 2%;">PICKUP FROM</div>
+                </th>
+                <th>
+                    <div class="letter" style="margin-left: 2%;">DELIVER TO</div>
+                </th>
+            </tr>
+            <tr>
+                <th style="vertical-align:text-top;" class="anchoins" colspan="2">
+                    <div class="letter" style="margin-left: 2%;">{{namepickup}} <br>
+                        {{addresspickup}} <br>
+                        {{addresspickup2}} <br>
+                        {{addresscountry}} / {{addresscitypickup}}
+                    </div>
+                </th>
+                <th style="vertical-align:text-top;" class="anchoins">
+
+                </th>
+
+
+            </tr>
+            <tr class="encabezado">
+                <th colspan="4" rowspan="">
+                    <div class="letter" style="margin-left: %;">NOTES</div>
+                </th>
+
+            </tr>
+
+
+            <tr>
+                <th style="vertical-align:text-top" class="anchoinst" colspan="3" rowspan="">
+                    <div class="letter" style="margin-left: 2%;"><br>
+                    </div>
+                </th>
+            </tr>
+        </table>
+        <br>
+        <table width="550px" style="text-align:left">
+            <tr>
+                <th class="encabezado" style="width:137px">
+                    <div class="letter " style="margin-left: 2%;text-align: left;">PCS</div>
+
+                </th>
+                <th class="encabezado celda-fijatax" style="width:137px">
+                    <div class="letter" style="margin-left: 2%;text-align: left;">NATURE OF GOODS</div>
+                </th>
+                <th class="encabezado celda-fijatax" style="width:137px">
+                    <div class="letter" style="margin-left: 2%;text-align: right;">GROSS WEIGHT</div>
+                </th>
+                <th class="encabezado" style="width:137px">
+                    <div class="letter" style="margin-left: 2%;text-align: right;">VOLUME WEIGHT</div>
+                </th>
+
+            </tr>
+
+
+            {{#each thepackages1}}
+            <tr>
+                <th style="">
+                    <div class="letter" style="margin-left: 2%;">{{quantity}}</div>
+                </th>
+                
+                <th colspan="" class="">
+                    <div class="letter" style="margin-left: 2%;">{{../this.goodsDescription}}</div>
+
+                </th>
+                <th style="text-align:right">
+                    <div class="letter" style="margin-left: 2%;">{{weight}} {{weightUom}}</div>
+                </th>
+                <th style="text-align:right">
+                    <div class="letter" style="margin-left: 2%;">{{volumetricWeight}} kg</div>
+                </th>
+
+            </tr>
+            {{/each}}
+        </table><br>
+        <table width="550px">
+            <tr>
+                <th
+                    style="text-align:left; border-left:1px solid transparent;border-right:1px solid transparent;border-bottom:1px solid transparent; line-height:143%">
+                    <div class="letter" style="margin-left: 2%;">TOTALS: </div>
+                </th>
+                <th
+                    style="text-align:right;border-left:1px solid transparent;border-right:1px solid transparent;border-bottom:1px solid transparent">
+                    <div class="letter" style="margin-left: 2%;text-align: right;">{{totallb}} lb</div>
+                </th>
+                <th
+                    style="text-align:right;border-left:1px solid transparent;border-right:1px solid transparent;border-bottom:1px solid transparent">
+                    <div class="letter" style="margin-left: 2%;">{{sumVol}} kg</div>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="4"
+                    style="border-left:1px solid transparent;border-right:1px solid transparent;border-bottom:1px solid transparent;line-height: 93% ">
+                    <div class="letter" style="margin-left: 2%;text-align:left">Ariline Agent Note: Delivering Documents
+                        and Freight <br> The Goods Herein Described Are Accepted Apparently in Good Order and Condition.
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="4"
+                    style="text-align:left;border-left:1px solid transparent;border-right:1px solid transparent;border-bottom:1px solid transparent;line-height:343%">
+                    <div class="letter" style="margin-left: 2%;">Received By: {{userCreated}}</div>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="4"
+                    style="text-align:left;border-left:1px solid transparent;border-right:1px solid transparent;border-bottom:1px solid transparent">
+                    <div class="letter" style="margin-left: 2%;">Date:
+                        {{datenow}} Time: ________________ </div>
+                </th>
+            </tr>
+        </table>
+        <div id="pageFooter" stye="text-align:right">
+            <table class="no-border" style="margin-left:1%;width: 98%; border: solid 5px white;">
+                <tr>
+                    <td style="text-align: right;">
+                        <span style="font-size: 40%;">POWERED BY</span>
+                        <img style="width: 10%;margin-right:4%;margin-bottom: -1%;"
+                            src="data:image/{{typeimagedaw}};base64,{{imagendaw}}" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+        </div>
+    </body>
+</section>
+
+</html>

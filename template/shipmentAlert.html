@@ -1,0 +1,212 @@
+<html>
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+    }
+
+    .no-break {
+        page-break-inside: avoid;
+
+    }
+
+    .no-breaks {
+        page-break-before: always;
+
+    }
+
+    .page {
+        counter-reset: page;
+    }
+
+    .arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        margin-top: -2%;
+        margin-left: 40%;
+        /* left: 40%;
+        bottom: 5%; */
+        size: 30%;
+    }
+
+    .logo {
+        margin-left: 2%;
+        margin-top: -2%;
+        display: block;
+
+    }
+
+    .logodawipo {
+        width: 50%;
+        margin-left: 85%;
+        margin-top: 40%;
+    }
+
+    .letterc {
+        margin-left: 63%;
+        margin-top: 2%;
+    }
+
+    .letterr {
+        margin-left: 70%;
+        margin-top: -5%;
+    }
+
+    .letter {
+        font-size: 70%;
+    }
+
+    .lettertitle {
+        font-size: 80%;
+        font-weight: bolder;
+    }
+
+    .marca {
+        opacity: 0.11;
+        filter: alpha(opacity=50);
+        position: fixed;
+
+    }
+
+    .no_borde {
+        border: transparent;
+    }
+
+    .dec {
+        text-decoration-line: overline underline line-through;
+    }
+
+    table,
+    th,
+    tr {
+        border: solid 1px #dbdfe5;
+        border-collapse: collapse;
+        padding: 2px;
+    }
+
+    .container {
+        margin-top: -1%;
+    }
+
+    .interlineado {
+        line-height: 24px
+        }
+</style>
+<section>
+
+    <head>
+        <div id="pageHeader">
+            <div class="logo">
+                <img style="width: 20%;" src="data:image/{{typeimagednc}};base64,{{imageenc}}"/>
+
+            </div>
+            <div>
+                <span class="lettertitle letterc" style="font-weight: bolder;background-color:#b0e0e6; color:#6495ed; font-size:80%; text-align: left;"><u>PRE ALERTA DE EMBARQUE</u></span>
+            </div>
+        </div>
+    </head>
+
+    <body>
+        <div class="container interlineado">
+            <span class="letter">Distinguidos Sres.:</span><br>
+            <span class="letter" style="text-align:center;margin-left:5%;font-weight: bolder"><u>Por este medio les enviamos los detalles sobre su embarque en tránsito</u></span>
+            <table class="no_borde" width="550px">
+                <tr class="no_borde">
+                    <th class="no_borde">
+                        <div class="letter" style="margin-left: 2%;text-align:left"><span style="font-weight: bolder">Proveedor: </span>{{nameshipper}}</div>
+
+                    </th>
+                </tr>
+                <tr class="no_borde">
+                    <th class="no_borde">
+                        <div class="letter" style="margin-left: 2%;text-align:left"><span style="font-weight: bolder">Consignatario: </span>{{nameconsignee}}</div>
+
+                    </th>
+                </tr>
+              <tr class="no_borde">
+                    <th class="no_borde">
+                        <div class="letter" style="margin-left: 2%;text-align:left"><span style="font-weight: bolder">Vía de embarque: </span>{{transport}}</div>
+
+                    </th>
+                </tr>
+              <tr class="no_borde">
+                    <th class="no_borde">
+                        <div class="letter" style="margin-left: 2%;text-align:left"><span style="font-weight: bolder">Puerto/Aeropuerto de embarque: </span>{{portOfLoadingMar}}</div>
+
+                    </th>
+                </tr>
+              <tr class="no_borde">
+                    <th class="no_borde">
+                        <div class="letter" style="margin-left: 2%;text-align:left"><span style="font-weight: bolder">Puerto/Aeropuerto de destino: </span>{{portOfUnloadingMar}}</div>
+
+                    </th>
+                </tr>
+              <tr class="no_borde">
+                    <th class="no_borde">
+                        <div class="letter" style="margin-left: 2%;text-align:left"><span style="font-weight: bolder">Tipo de Mercancía: </span>{{productType}}</div>
+
+                    </th>
+                </tr>
+              <tr class="no_borde">
+                    <th class="no_borde">
+                        <div class="letter" style="margin-left: 2%;text-align:left"><span style="font-weight: bolder">MBL/MAWB No: </span>{{valmbl}}</div>
+
+                    </th>
+                </tr><tr class="no_borde">
+                    <th class="no_borde">
+                        <div class="letter" style="margin-left: 2%;text-align:left"><span style="font-weight: bolder">HBL/HAWB No: </span>{{valHwb}}</div>
+
+                    </th>
+                </tr>
+              <tr class="no_borde">
+                    <th class="no_borde">
+                        <div class="letter" style="margin-left: 2%;text-align:left"><span style="font-weight: bolder">Nave: </span> {{nave}}</div>
+
+                    </th>
+                </tr>
+              <tr class="no_borde">
+                    <th class="no_borde">
+                        <div class="letter" style="margin-left: 2%;text-align:left"><span style="font-weight: bolder">ETD: </span>{{etd}}</div>
+
+                    </th>
+                </tr>
+          <tr class="no_borde">
+                    <th class="no_borde">
+                        <div class="letter" style="margin-left: 2%;text-align:left"><span style="font-weight: bolder">ETA (APROX): </span>{{eta}}</div>
+
+                    </th>
+                </tr>
+              <tr class="no_borde">
+                    <th class="no_borde">
+                        
+                        <div class="letter" style="margin-left: 2%;text-align:left"><span style="font-weight: bolder">Contenedor No: </span>{{ncontent}}</div>
+                   
+                    </th>
+                </tr>
+
+
+
+            </table>
+           <div id="pageFooter" stye="text-align:right">
+                <table class="no-border" style="margin-left:1%;width: 98%; border: solid 5px white;">
+                    <tr>
+                        <td style="text-align: right;">
+                        <span style="font-size: 40%;">POWERED BY</span>
+                        <img style="width: 10%;margin-right:4%;margin-bottom: -1%;" src="data:image/{{typeimagedaw}};base64,{{imagendaw}}" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </body>
+
+</section>
+
+
+
+
+
+</html>

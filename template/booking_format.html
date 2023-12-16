@@ -79,12 +79,9 @@
     <section>
         <head>
             <div id="pageHeader">
-                
                 <div class="arrow-down" style=" border-top: 50px solid {{colors}};"></div>
-                
-                <span class="lettertitle letterc" >Booking Request {{numberbooking}}</span>
+                <span class="lettertitle letterc" style="font-weight: bolder;">Shipping Instruction {{liberationNumber}}</span>
                 <span class="lettertitle letterc" >Date: {{datenow}}</span>
-               
                 <div class="logo">
                     <img style="width: 20%;margin-top: -8%;" src="data:image/{{typeimagednc}};base64,{{imageenc}}"/>
 
@@ -93,7 +90,7 @@
                 <hr x1="20" y1="15" x2="8000" y2="15">
                 <hr x1="20" y1="15" x2="8000" y2="15">
                 </div> -->
-              </div>
+            </div>
             
             
         </head>
@@ -101,84 +98,87 @@
         <body>
             <div class="container">
                 <div class="row " style="padding-left: 2%;padding-right: 3%;">
-                    <div class="letter" style="background-color: {{colors}};color:white;text-align: center;">GENERAL INFORMATION</div>
+                    <div style="position: relative; float: right; width: 100%; margin-top: 0%;">
+                        <div class="letter" style="background-color: {{colors}};color:white;text-align: center; padding-top: 0.3%; padding-bottom: 0.3%">GENERAL INFORMATION</div>
 
-                    <div  style="position: relative; float: left; width: 50%; ">
-                        <table style="width: 100%; text-align: left;" >
+                        <div  style="position: relative; float: left; width: 50%; ">
+                            <table style="width: 100%; text-align: left;" >
 
-                            <tr>
-                                <th>
-                                    <div class="letter" style="margin-left: 2%;">Shipping Instruction Submitted by: {{userName}} </div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <div class="letter" style="margin-left: 2%;">Email Address: {{userEmail}}</div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <div class="letter" style="margin-left: 2%;">Phone Number: {{userPhone}}</div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <div class="letter" style="margin-left: 2%;">Mode of Transport: {{transport}}</div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <div class="letter" style="margin-left: 2%;">Customer Reference Type: {{referenceType}} </div>
-                                </th>
-                            </tr>
-                            <tr> 
-                                <th>
-                                    <div class="letter" style="margin-left: 2%;">Customer Reference Number: {{referenceValue}}</div>
-                                </th>
-                            </tr>
-                        </table>
-                       
-                    </div>
-    
-                    <div style="position: relative; float: left; width: 50%;">
-                        <table style="width: 100%;text-align: left;">
-                            <tr>
-                                <th>
-                                    <div class="letter" style="margin-left: 2%;">Delivery Mode: {{deliverymode}}</div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th><div class="letter" style="margin-left: 2%;">Rate Category: {{ratecategory}} </div></th>
-                            </tr>
-                            <tr> 
-                                <th>
-                                <div class="letter" style="margin-left: 2%;">Carrier: {{carrier}}</div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <div class="letter" style="margin-left: 2%;">Incoterm: {{incoterm}}</div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <div class="letter" style="margin-left: 2%;">Inconterm Location: {{inconterl}}</div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <div class="letter" style="margin-left: 2%;">Shipment Type: {{shipment}} </div>
-                                </th>
-                            </tr>
-                            <tr>
-                                
-                            </tr>
-                        </table>
-                        <br>
+                                <tr>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Shipping Instruction Submitted by: {{userName}} </div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Email Address: {{userEmail}}</div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Phone Number: {{userPhone}}</div>
+                                    </th>
+                                </tr>
+                            
+                                <tr>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Customer Reference Type: {{referenceType}} </div>
+                                    </th>
+                                </tr>
+                                <tr> 
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Customer Reference Number: {{referenceValue}}</div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Shipment Type: {{shipment}} </div>
+                                    </th>
+                                </tr>
+                            </table>
                         
+                        </div>
+                        <div style="position: relative; float: left; width: 50%;">
+                            <table style="width: 100%;text-align: left;">
+                                <tr>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Requested Pickup Date: {{requestedPickupDate}}</div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Transport Mode: {{transport}}</div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th><div class="letter" style="margin-left: 2%;">Rate Category: {{ratecategory}} </div></th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">Delivery Mode: {{deliverymode}}</div>
+                                    </th>
+                                </tr>
+                                <tr> 
+                                    <th>
+                                    <div class="letter" style="margin-left: 2%;">3PL: {{carrier}}</div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">INCOTERM: {{incoterm}}</div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <div class="letter" style="margin-left: 2%;">INCOTERM location: {{inconterl}}</div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    
+                                </tr>
+                            </table>
+                        </div>
                     </div>
-
-
                     <div style="position: relative; float: left; width: 50%;">
                         <table style="width: 100%;text-align: left;">
                             <tr style="background-color: {{colors}};color:white">
@@ -240,7 +240,6 @@
                         </table>
                       
                     </div>
-    
                     <div style="position: relative; float: left; width: 50%;">
                         <table style="width: 100%;text-align: left;">
                             <tr style="background-color: {{colors}};color:white">
@@ -315,17 +314,17 @@
                             </tr>
                             <tr>
                                 <th>
-                                    <div class="letter" style="margin-left: 2%;">Contact Name: {{contactnamedelivery}} </div>
+                                    <div class="letter" style="margin-left: 2%;">Address Line 1: {{addressdelivery1}}</div>
+                                </th>
+                            </tr>
+                            <tr> 
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Address Line 2: {{addressdelivery2}}</div>
                                 </th>
                             </tr>
                             <tr>
                                 <th>
-                                <div class="letter" style="margin-left: 2%;">Contact Email: {{contactemaildelivery}}</div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <div class="letter" style="margin-left: 2%;">Contact Phone: {{contactphonedelivery}}</div>
+                                    <div class="letter" style="margin-left: 2%;">Postal Code: {{postalCodeDelivery}}</div>
                                 </th>
                             </tr>
                             <tr>
@@ -340,13 +339,26 @@
                             </tr>
                             <tr>
                                 <th>
-                                <div class="letter" style="margin-left: 2%;">Country: {{addresscountrydelivery}} </div>
-                            </th></tr>
-                        
+                                    <div class="letter" style="margin-left: 2%;">Country: {{addresscountrydelivery}} </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Contact: {{contactnamedelivery}} </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Phone: {{contactphonedelivery}}</div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                <div class="letter" style="margin-left: 2%;">Email: {{contactemaildelivery}}</div>
+                                </th>
+                            </tr>
                         </table>       
                     </div>
-
-                    
                     <div style="position: relative; float: right; width: 50%; margin-top: 0%;">
                         <table style="width: 100%;text-align: left;">
                             <tr style="background-color:{{colors}};color:white">
@@ -361,17 +373,17 @@
                             </tr>
                             <tr>
                                 <th>
-                                    <div class="letter" style="margin-left: 2%;">Contact  Name: {{contactname}} </div>
+                                    <div class="letter" style="margin-left: 2%;">Address Line 1: {{addresspickup}}</div>
                                 </th>
                             </tr>
                             <tr> 
                                 <th>
-                                    <div class="letter" style="margin-left: 2%;">Contact Email: {{contactemail}}</div>
+                                    <div class="letter" style="margin-left: 2%;">Address Line 2: {{addresspickup2}}</div>
                                 </th>
                             </tr>
                             <tr>
                                 <th>
-                                    <div class="letter" style="margin-left: 2%;">Contact Phone: {{contactphone}}</div>
+                                    <div class="letter" style="margin-left: 2%;">Postal Code: {{postalCodepickup}}</div>
                                 </th>
                             </tr>
                             <tr>
@@ -386,17 +398,91 @@
                             </tr>
                             <tr>
                                 <th>
-                                    <div class="letter" style="margin-left: 2%;">Country: {{addresscountry}} </div>
+                                    <div class="letter" style="margin-left: 2%;">Country: {{addresscountry}}</div>
+                                </th>
+                             </tr>
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Contact: {{contactname}} </div>
                                 </th>
                             </tr>
-                        
+                            <tr>
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Phone: {{contactphone}}</div>
+                                </th>
+                            </tr>
+                            <tr> 
+                                <th>
+                                    <div class="letter" style="margin-left: 2%;">Email: {{contactemail}}</div>
+                                </th>
+                            </tr>
+                
                         </table>
                     </div>
+                    <div style="position: relative; float: right; width: 100%; margin-top: 0%;" class="no-break">
+                        <div class="letter" style="background-color: {{colors}};color:white;text-align: center;padding-top: 0.3%; padding-bottom: 0.3%">NOTIFY</div>
 
-
-
-                    
-                    <div style="position: relative; float: left; width: 50%;">
+                        <div  style="position: relative; float: left; width: 50%; ">
+                                    <table style="width: 100%; text-align: left;" >
+                                        <tr>
+                                            <th>
+                                                <div class="letter" style="margin-left: 2%;">Name: {{namenotify}}</div>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <div class="letter" style="margin-left: 2%;">Address Line 1: {{addressNotify1}}</div>
+                                            </th>
+                                        </tr>
+                                        <tr> 
+                                            <th>
+                                                <div class="letter" style="margin-left: 2%;">Address Line 2: {{addressNotify2}}</div>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <div class="letter" style="margin-left: 2%;">Postal Code: {{postalCodeNotify}}</div>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <div class="letter" style="margin-left: 2%;">City: {{addresscityNotify}}</div>
+                                            </th>
+                                        </tr>
+                                    </table>
+                        </div>
+                        <div  style="position: relative; float: left; width: 50%; ">
+                                    <table style="width: 100%;text-align: left;">
+                                        
+                                        <tr>
+                                            <th>
+                                                <div class="letter" style="margin-left: 2%;">State: {{addresstateNotify}} </div>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <div class="letter" style="margin-left: 2%;">Country: {{addresscountryNotify}} </div>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <div class="letter" style="margin-left: 2%;">Contact: {{contactnameNotify}}</div>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <div class="letter" style="margin-left: 2%;">Phone: {{contactphoneNotify}}</div>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <div class="letter" style="margin-left: 2%;">E-mail: {{contactemailNotify}}</div>
+                                            </th>
+                                        </tr>
+                                    </table>
+                        </div>
+                    </div>
+                    <div style="position: relative; float: left; width: 50%;" class="no-break">
                         <table style="width: 100%;text-align: left;">
                             <tr style="background-color: {{colors}};color:white">
                                 <th>
@@ -410,7 +496,7 @@
                             </tr>
                             <tr>
                                 <th>
-                                    <div class="letter" style="margin-left: 2%;">Name: {{originlocation}} </div>
+                                    <div class="letter" style="margin-left: 2%;">City: {{originlocation}} </div>
                                 </th>
                             </tr>
                             <tr>
@@ -423,8 +509,7 @@
                         </table>   
                         
                     </div>
-
-                    <div style="position: relative; float: left; width: 50%;">
+                    <div style="position: relative; float: left; width: 50%;" class="no-break">
                         <table style="width: 100%;text-align: left;">
                             <tr style="background-color: {{colors}};color:white">
                                 <th>
@@ -438,7 +523,7 @@
                             </tr>
                             <tr>
                                 <th>
-                                    <div class="letter" style="margin-left: 2%;">Name:  {{destinationname}}</div>
+                                    <div class="letter" style="margin-left: 2%;">City:  {{destinationname}}</div>
                                 </th>
                             </tr>
                             <tr>
@@ -452,106 +537,96 @@
                     </div>
                     <br>
                     <div class="negrita" style="background-color: white;color:white;text-align: center;">fdgdf</div>
- 
                     <div class="no-break">
-                            <table style="width: 100%; " class="no-break">
-                                <td colspan="10" class="letter" style="background-color: {{colors}};color: white;text-align: center;">CARGO</td>
-                                <tr style="background-color: {{colors}};color: white;">
-                                    <th style="width: 10%;" class="letter">Count</th>
-                                    <th style="width: 10%;"class="letter">Package Type</th>
-                                    <th style="width: 10%;"class="letter" >Dimensions</th>
-                                    <th style="width: 10%;"class="letter">UoM</th>
-                                    <th style="width: 10%;"class="letter">Gross Weight</th>
-                                    <th style="width: 10%;"class="letter">UoM</th>
-                                    <th style="width: 10%;"class="letter">Volumetric weight</th>
-                                    <th style="width: 10%;"class="letter">Chargeabe Weight</th>
-                                    
-                                </tr>
-                               {{#each thepackages1}}
-                                <tr>
-                                    <th style="width: 10%;"class="letter">{{quantity}}</th>
-                                    <th style="width: 14%;"class="letter">{{packagetypes}}</th>
-                                    <th style="width: 10%;"class="letter">{{lengthh}} x {{width}} x {{height}}</th>
-                                    <th style="width: 10%;"class="letter">{{dimensionsUnit}}</th>
-                                    <th style="width: 10%;"class="letter">{{weight}}</th>
-                                    <th style="width: 10%;"class="letter">kg</th>
-                                    <th style="width: 10%;"class="letter">{{volumetricWeight}}</th>
-                                    <th style="width: 10%;"class="letter">{{chargeableWeighttotal}}</th>
-                                  
-                                </tr>
-                               {{/each}}
-                               
+                        <table style="width: 100%; " class="no-break">
+                            <td colspan="10" class="letter" style="background-color: {{colors}};color: white;text-align: center;">PACKAGES</td>
+                            <tr style="background-color: {{colors}};color: white;">
+                                <th style="width: 10%;" class="letter">Count</th>
+                                <th style="width: 10%;"class="letter">Package Type</th>
+                                <th style="width: 10%;"class="letter" >Dimensions</th>
+                                <th style="width: 10%;"class="letter">UoM</th>
+                                <th style="width: 10%;"class="letter">Gross Weight</th>
+                                <th style="width: 10%;"class="letter">UoM</th>
+                                <th style="width: 10%;"class="letter">Volumetric weight</th>
+                                <th style="width: 10%;"class="letter">Chargeabe Weight</th>
+                            </tr>
+                            {{#each thepackages1}}
+                            <tr>
+                                <th style="width: 10%;"class="letter">{{quantity}}</th>
+                                <th style="width: 14%;"class="letter">{{packagetypes}}</th>
+                                <th style="width: 10%;"class="letter">{{length}} x {{width}} x {{height}}</th>
+                                <th style="width: 10%;"class="letter">{{dimensionsUnit}}</th>
+                                <th style="width: 10%;"class="letter">{{weight}}</th>
+                                <th style="width: 10%;"class="letter">kg</th>
+                                <th style="width: 10%;"class="letter">{{volumetricWeight}}</th>
+                                <th style="width: 10%;"class="letter">{{chargeableWeighttotal}}</th>
                             
-                                <tr>
-                                    <th class="letter" colspan="10" style="background-color:{{colors}};text-align:right;color:white">
-                                        Total : {{totalfinallypackages}}
-                                    </th>
-                                </tr>
-                    
-                            </table>
+                            </tr>
+                            {{/each}}
+                            <tr>
+                                <th class="letter" colspan="10" style="background-color:{{colors}};text-align:right;color:white">
+                                    Total : {{totalfinallypackages}}
+                                </th>
+                            </tr>
+                                    
+                        </table>
                     
                     </div>
-                <br> <br>
-                        {{#if modeOfTransport}}
-                        <div class="no-break">
-                            <table style="width: 100%; " class="no-break">
-                                <tr style="background-color: {{colors}};color: white;">
-                                    <th style="width: 10%;"class="letter">Container Count</th>
-                                    <th style="width: 10%;"class="letter">Container Type</th>
-                                    <th style="width: 10%;"class="letter" >Gross Weight</th>
-                                    <th style="width: 10%;"class="letter">UoM</th>
-                                    <th style="width: 10%;"class="letter">Volume</th>
-                                    <th style="width: 10%;"class="letter">Volume UoM</th>
-                                </tr>
-                                {{#each quotesthecontainer}}
-                                <tr>
-                                    <th style="width: 10%;"class="letter">{{palletsQuantity}}</th>
-                                    <th style="width: 10%;"class="letter">{{containerType}}</th>
-                                    <th style="width: 10%;"class="letter">{{weight}}</th>
-                                    <th style="width: 10%;"class="letter">{{weightUom}}</th>
-                                    <th style="width: 10%;"class="letter">{{volume}}</th>
-                                    <th style="width: 10%;"class="letter">{{volumeUom}}</th>
-                                
-                    
-                                </tr> 
-                                {{/each}}
-                                <tr>
-                                    <th class="letter" colspan="10" style="background-color:{{colors}};text-align:right;color:white">
-                                        Total : {{totalcontainer}}
-                                    </th>
-                                </tr>
-                                    
-                            </table>
-
-                        </div>
-                       
-                    {{/if}}
-
-                   
-                   
-                    
+                    <br> <br>
+                    {{#if modeOfTransport}}
+                    <div class="no-break">
+                        <table style="width: 100%; " class="no-break">
+                            <td colspan="10" class="letter" style="background-color: {{colors}};color: white;text-align: center;">CONTAINERS</td>
+                            <tr style="background-color: {{colors}};color: white;">
+                                <th style="width: 10%;"class="letter">Container Count</th>
+                                <th style="width: 10%;"class="letter">Container Type</th>
+                                <th style="width: 10%;"class="letter" >VGM</th>
+                                <th style="width: 10%;"class="letter">UoM</th>
+                                <th style="width: 10%;"class="letter">Volume</th>
+                                <th style="width: 10%;"class="letter">Volume UoM</th>
+                            </tr>
+                            {{#each quotesthecontainer}}
+                            <tr>
+                                <th style="width: 10%;"class="letter">{{quantity}}</th>
+                                <th style="width: 10%;"class="letter">{{containerType}}</th>
+                                <th style="width: 10%;"class="letter">{{vgm}}</th>
+                                <th style="width: 10%;"class="letter">{{vgmUom}}</th>
+                                <th style="width: 10%;"class="letter">{{volume}}</th>
+                                <th style="width: 10%;"class="letter">{{volumeUom}}</th>
+                            
                 
-                    
-                    
+                            </tr> 
+                            {{/each}}
+                            <tr>
+                                <th class="letter" colspan="10" style="background-color:{{colors}};text-align:right;color:white">
+                                    Total : {{totalcontainer}}
+                                </th>
+                            </tr>
+                                
+                        </table>
+
+                    </div>
+                    {{/if}}
                 </div>
             </div>
             <br>
-          
-            
             <div class="no-break">
                 <table style="width: 95%;margin-left: 2%;" class="no-break">
                     <td colspan="10" class="letter" style="background-color: {{colors}};color: white;text-align: center;">SPECIAL INSTRUCTIONS</td>
-                    
+                   
+                    {{#each commentsbooking}}
                     <tr>
-                        {{#each commentsbooking}}
+                       
                         <th class="letter">
                             <spa style="text-align: left;">{{datecommets}}</spa>
                             <spa style="text-align: center;">{{commentsbb}}</spa>
                              
                         </th>
                         
-                        {{/each}}
+                        
                     </tr>
+                    {{/each}}
+              
                    
                         
                 </table>

@@ -1,0 +1,338 @@
+<html>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+
+        .no-break {
+            page-break-inside: avoid;
+        }
+
+        .no-breaks {
+            page-break-before: always;
+        }
+
+        .page {
+            counter-reset: page;
+        }
+
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            margin-top: -2%;
+            margin-left: 40%;
+            /* left: 40%;
+            bottom: 5%; */
+            size: 30%;
+        }
+
+        .logo {
+            margin-left: 2%;
+            margin-top: -2%;
+            display: block;
+        }
+
+        .logodawipo {
+            width: 50%;
+            margin-left: 85%;
+            margin-top: 40%;
+        }
+
+        .letterc {
+            margin-left: 2%;
+            margin-top: 2%;
+        }
+
+        .letterr {
+            margin-left: 70%;
+            margin-top: -5%;
+        }
+
+        .letter {
+            font-size: 55%;
+        }
+
+        .lettertitle {
+            font-size: 80%;
+            font-weight: bolder;
+        }
+
+        .marca {
+            opacity: 0.11;
+            filter: alpha(opacity=50);
+            position: fixed;
+        }
+
+        .dec {
+            text-decoration-line: overline underline line-through;
+        }
+
+        table,
+        th,
+        tr {
+            border: solid 1px #dbdfe5;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+
+        .container {
+            margin-top: -1%;
+        }
+
+        .no_borde {
+            border: transparent;
+        }
+
+        .interlineado {
+            line-height: 7px
+        }
+        .interlineadoprinted {
+            line-height: 10px
+        }
+        th.celda-fija {
+            width:275px;
+            z-index: 1; /* Asegura que las celdas fijas estén por encima del contenido */
+        }
+        th.celda-fijaf {
+            width:70px;
+            z-index: 1; 
+        }
+        th.celda-fijafo {
+            width:127px;
+            z-index: 1; 
+        }
+        .encabezado {
+            background-color: {{colors}};
+            color:white;
+        }
+        th.anchoins{
+            height: 80px; 
+        }
+    </style>
+    <section>
+        <head style="padding-left: 1%;padding-right:2%">
+            <div id="pageHeader">
+                <div class="lettertitle" style="margin-left: 2%; text-align: center;">Booking Confirmation <br> {{numberbooking}}</div> <br>
+                <table  width=100% class='no_borde'>
+                    <tr class='no_borde'>
+                        <td width="73%">
+                            <div class="logo">
+                                <img style="width: 20%;" src="data:image/{{typeimagednc}};base64,{{imageenc}}" />
+                            </div> 
+                            <div class="interlineadoprinted">
+                                <span class="letter letterc">Printed On: {{datenow}}</span>
+                                <br>
+                                <span class="letter letterc">Printed By: {{users}}</span>
+                            </div>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <div class="interlineado" >
+                                <div class="letter " style="margin-left: 2%; text-align:left; margin-right: 2%; font-weight: bolder;">Vanguard Medical Logistics</div><br>
+                                <div class="letter " style="margin-left: 2%; text-align:left; margin-right: 2%; ">Panamerica Corporate Center</div> <br>
+                                <div class="letter" style="margin-left: 2%;">Bodega 9095, Panamá Pacífico</div> <br>
+                                <div class="letter" style="margin-left: 2%;">cservice@vml-sa.com </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </head>
+        <br>
+        <body class="container" style="padding-left: 1%;padding-right:2%;text-align:left">
+            <table width="550px" style="text-align:left">
+                <tr class="encabezado">
+                    <th colspan="2" width="137px">
+                        <div class="letter" style="margin-left: 2%;">BOOKING</div>
+                    </th>
+                    <th colspan="2" class="celda-fija">
+                        <div class="letter" style="margin-left: 2%;">CONTACT</div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" class="celda-fija">
+                    <div class="letter" style="margin-left: 2%;">AWB #:  {{awb}}</div>
+                    </th>
+                    <th colspan="2" class="celda-fija">
+                    <div class="letter" style="margin-left: 2%;">NAME: {{userCreated}}</div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" class="celda-fija">
+                    <div class="letter" style="margin-left: 2%;">HAWB #:  {{hawb}}</div>
+                    </th>
+                    
+                    <th colspan="2" class="celda-fija">
+                    <div class="letter" style="margin-left: 2%;">PHONE: </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" class="celda-fija">
+                    <div class="letter" style="margin-left: 2%"> SHIPMENT #: {{shipmentNumber}}</div>
+                    </th>
+                
+                    <th colspan="2" class="celda-fija">
+                    <div class="letter" style="margin-left: 2%;">EMAIL: {{userEmailC}}</div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" class="celda-fija">
+                    <div class="letter" style="margin-left: 2%;">QUOTE: {{referenceValue}}</div>
+                    </th>
+                    <th colspan="2" class="celda-fija">
+                    <div class="letter" style="margin-left: 2%;">DATE: {{datenow}}</div>
+                    </th>
+                </tr>
+                <tr class="encabezado">
+                    <th colspan="2" class="celda-fija">
+                    <div class="letter" style="margin-left: 2%;">SHIPPER</div>
+                    </th>
+                <th colspan="3" class="celda-fija">
+                    <div class="letter" style="margin-left: 2%;">ADDITIONAL INFORMATION</div>
+                    </th>
+                </tr>
+                <tr class='no_borde'>
+                    <th rowspan="6" colspan="2" style="vertical-align: top;">
+                        <div class="letter" style="margin-left: 2%;">{{nameshipper}} <br> 
+                            {{addreshipper1}} <br>
+                            {{addreshipper2}} <br>
+                            {{countryshipper}} / {{cityshipper}}
+                        </div>
+                    </th>
+                    <th style="border-bottom: 1px solid transparent;" colspan="3">
+                    <div class="letter" style="margin-left: 2%;">CARRIER: {{carrier}}
+                        <br>
+                    </div>
+                    </th>
+                </tr>
+                <tr style="border-bottom: 1px solid transparent;">
+                    <th colspan="3" style="border-bottom: 1px solid transparent;">
+                    <div class="letter" style="margin-left: 2%;">FLIGHT: {{flight}} </div>
+                    </th>
+                </tr>
+                <tr style="border-bottom: 1px solid transparent;">
+                    <th colspan="3" style="border-bottom: 1px solid transparent;">
+                        <div class="letter" style="margin-left: 2%;">CUT OFF :</div>
+                    </th>
+                </tr>
+                <tr style="border-bottom: 1px solid transparent;">
+                    <th colspan="3" style="border-bottom: 1px solid transparent;">
+                        <div class="letter" style="margin-left: 2%;">DOC CUT OFF: </div>
+                    </th>
+                </tr>
+                <tr style="border-bottom: 1px solid transparent;">
+                    <th colspan="3" style="border-bottom: 1px solid transparent;">
+                        <div class="letter" style="margin-left: 2%;">ETD: {{etd}}</div>
+                    </th>
+                </tr>
+                <tr style="border-bottom: 1px solid transparent;">
+                    <th colspan="3" style="border-bottom: 1px solid transparent;">
+                        <div class="letter" style="margin-left: 2%;">ETA: {{eta}} </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" style="background-color:{{colors}};color:white">
+                    <div class="letter" style="margin-left: 2%;">CONSIGNEE</div>
+                    </th>
+                    <th colspan="2" style="border-bottom: 1px solid transparent;">
+                    </th>
+                </tr>
+                <tr>
+                <th colspan="2" class="anchoins" style="vertical-align: top;">
+                    <div class="letter" style="margin-left: 2%;">{{nameconsignee}} <br> 
+                        {{addressconsignee1}} <br> 
+                        {{addressconsignee2}} <br>
+                        {{countryconsignee}} / {{cityconsignee}} </div>
+                    </th>
+                    <th colspan="2" style="border-top: 1px solid transparent;">
+                    </th>
+                </tr>
+                <tr>
+                    <th style="background-color:{{colors}};color:white" class="celda-fijaf">
+                        <div class="letter" style="margin-left: 2%;"> AIRPORT FROM: </div>
+                    </th>
+                    <th class="celda-fijafo">
+                        <div class="letter" style="margin-left: 2%;">{{airportOfDeparture}}</div>
+                    </th>
+                    <th style="background-color:{{colors}};color:white" class="celda-fijaf">
+                    <div class="letter" style="margin-left: 2%;">AIRPORT TO : </div>
+                    </th>
+                    <th class="celda-fijafo"> 
+                    <div class="letter" style="margin-left: 2%;">{{airportOfArrival}}</div>
+                    </th>
+                </tr>
+            </table>
+            <br>
+            <table width="550px" class="no-break" style="">
+                <tr style="background-color: {{colors}};color: white;">
+                <th style="width: 3%;" class="letter">PIECES</th>
+                <th style="width: 15%;" class="letter">PACKAGE</th>
+                <th style="width: 10%;" class="letter">DIMENSIONS</th>
+                <th style="width: 5%;" class="letter" rowspan="2">WEIGHT</th>
+                <th style="width: 7%;" class="letter" rowspan="2">VOL/ WEIGHT</th>
+                <th style="width: 13%;" class="letter" rowspan="2">COMMODITY CLASSIFICATION</th>
+                </tr>
+                <tr style="background-color: {{colors}};color: white;">
+                <th style="width: 10%;" class="letter" colspan="3">DESCRIPTION</th>
+                </tr>
+                {{#each thepackages1}}
+                <tr>
+                <th class="letter" >{{quantity}}</th>
+                <th class="letter" >{{packagetypes}}</th>
+                <th class="letter" >{{length}} x {{width}} x {{height}} {{dimensionsUom}}</th>
+                <th class="letter" >{{weight}} {{weightUom}}</th>
+                <th class="letter" >{{volumetricWeight}}</th>
+                {{#if (test @index)}}
+                    <th class="letter" style="text-align: center;" rowspan="{{../theindex}}">
+                        {{../this.commodityCode}}</th>
+
+                    {{/if}}
+                {{/each}}
+                </tr>
+                
+            </table>
+            <br>
+            <table width="200px" class="no-break" style="text-align:right;margin-left:350px;">
+                <tr style="background-color: {{colors}};color: white;">
+                <th style="width: 10%;" class="letter">PIECES</th>
+                <th style="width: 10%;" class="letter">WEIGHT</th>
+                <th style="width: 10%;" class="letter">VOLUME</th>
+                <tr>
+                <th style="width: 10%;" class="letter">{{totalfinallypackages}}</th>
+                <th style="width: 10%;" class="letter">{{totallb}} lb </th>
+                <th style="width: 10%;" class="letter">0.000 lb</th>
+                </tr>
+                <tr>
+                <th style="width: 10%; border-left: 1px solid transparent;border-bottom: 1px solid transparent"></th>
+                <th style="width: 10%;" class="letter">{{{totalkg}}} kg </th>
+                <th style="width: 10%;" class="letter">{{sumVol}} kg </th>
+                </tr>
+            </table>
+            <br><br>
+            <div class="no-break" style="line-height:60%;  margin-left: 2%; margin-right: 2%; text-align: justify;">
+                <span style="font-size: 48%;"> Upon pick up of cargo and signed for both shipper and driver for confirmation cargo received complete and in a good conditions. <br>
+                    Once cargo received from warehouse we will perform re-weight if cargo Chargeable weight is based on actual or volume whichever is higher. <br>Insurance optional. <br>
+                    Quote excludes charges for the following wait time at pick up & drop locations, courier, insurance, re-weight, re-delivery and certificate of origin if any. <br> It is agreed that the goods described herein apparent good order an condition (except as noted) <br>
+                    for carriage SUBJECT TO THE CONDITIONS OF CONTRACT O THE REVERSE HEREOF. <br> 
+                    ALL GOODS MAT CARRIED BY ANY OTHER MEANS INCLUDING ROAD OR ANY OTHER CARRIER UNLESS SPECIFIC CONTRARY <br>
+                    INSTRUCTIONS ARE GIVEN HEREON. BY THE SHIPPER AND SHIPPER AGREES THAT THE SHIPMENT MAY BE CARRIED VIA INTERMEDIATE <br>
+                    STOPPING PLACES WHICH THE CARRIER DEEMS APPROPRIATE. THE SHIPPERS ATTENTIONS DRAWN TO THE NOTICE CONCERNING CARRIER'S LIMITATION OF LIABILITY. <br>
+                    Shipper may increase such limitation of liability by declaring higher value for carriage and paying supplemental if required 
+                </span>
+            </div>
+            <div id="pageFooter" stye="text-align:right">
+                <table class="no-border" style="margin-left:1%;width: 98%; border: solid 5px white;">
+                    <tr>
+                        <td style="text-align: right;">
+                        <span style="font-size: 40%;">POWERED BY</span>
+                        <img style="width: 10%;margin-right:4%;margin-bottom: -1%;" src="data:image/{{typeimagedaw}};base64,{{imagendaw}}" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </body>
+    </section>
+</html>

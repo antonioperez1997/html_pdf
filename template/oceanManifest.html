@@ -1,0 +1,372 @@
+<html>
+<style>
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+  }
+
+  .no-break {
+    page-break-inside: avoid;
+  }
+
+  .no-breaks {
+    page-break-before: always;
+  }
+
+  .page {
+    counter-reset: page;
+  }
+
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    margin-top: -2%;
+    margin-left: 40%;
+    /* left: 40%;
+           bottom: 5%; */
+    size: 30%;
+  }
+
+  .logo {
+    margin-left: 2%;
+    margin-top: -2%;
+    display: block;
+  }
+
+  .logodawipo {
+    width: 50%;
+    margin-left: 85%;
+    margin-top: 40%;
+  }
+
+  .letterc {
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+
+  .letterr {
+    margin-left: 70%;
+    margin-top: -5%;
+  }
+
+  .letter {
+    font-size: 55%;
+  }
+
+  .lettertitle {
+    font-size: 80%;
+    font-weight: bolder;
+  }
+  .letterBolder {
+    font-size: 55%;
+    font-weight: bolder;
+  }
+
+  .marca {
+    opacity: 0.11;
+    filter: alpha(opacity=50);
+    position: fixed;
+  }
+
+  .dec {
+    text-decoration-line: overline underline line-through;
+  }
+
+  table,
+  th,
+  tr {
+    border: solid 1px #dbdfe5;
+    border-collapse: collapse;
+    padding: 2px;
+  }
+
+  .container {
+    margin-top: -1%;
+  }
+
+  .no_borde {
+    border: transparent;
+  }
+
+  .interlineado {
+    line-height: 7px
+  }
+
+  .interlineadoprinted {
+    line-height: 10px
+  }
+
+  .encabezado {
+                background-color: {{colors}};
+                color:white;
+            }
+
+
+
+  th.celda-fija {
+    width: 275px;
+    z-index: 1;
+    /* Asegura que las celdas fijas estén por encima del contenido */
+  }
+
+  th.anchoins {
+    height: 60px;
+  }
+
+  .front-text {
+    float: left;
+    /* Otros estilos que desees aplicar */
+  }
+
+  .back-text {
+    float: right;
+    right: 20px
+      /* Otros estilos que desees aplicar */
+  }
+
+  .bordertnsp {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+  }
+
+  .bordertnsright {
+    border-right: 1px solid transparent;
+  }
+
+  th.celda-fijath {
+    width: 90px;
+    z-index: 1;
+    /* Asegura que las celdas fijas estén por encima del contenido */
+  }
+
+  th.celda-fijatax {
+    width: 66px;
+    z-index: 1;
+    /* Asegura que las celdas fijas estén por encima del contenido */
+  }
+</style>
+<section>
+
+  <head style="padding-left: 1%;padding-right:2%">
+    <div id="pageHeader">
+      <div class="letter" style="margin-left: 2%; text-align: left;">OPERACIONES</div> <br>
+      <table width=100% class='no_borde'>
+        <tr class='no_borde'>
+          <td width="73%">
+            <div class="logo">
+              <img style="width: 20%;" src="data:image/{{typeimagednc}};base64,{{imageenc}}" />
+            </div>
+            <div class="interlineadoprinted">
+              <span class="letter letterc">Printed On: {{datenow}}</span>
+              <br>
+              <span class="letter letterc">Printed By: {{users}}</span>
+            </div>
+          </td>
+          <td style="vertical-align: top;">
+            <div class="interlineado">
+              <div class="lettertitle "
+                style="margin-left: 2%; text-align:left; margin-right: 2%; font-weight: bolder; color: #808080;">
+                OCEAN CARGO MANIFEST</div><br>
+              <img src='data:image/png;base64,{{barcManifest}}' style="width:100%" />
+
+            </div>
+
+          </td>
+        </tr>
+      </table>
+    </div>
+  </head>
+  <br>
+
+  <body class="container" style="padding-left: 1%;padding-right:2%;text-align:left">
+    <table width="800px" style="text-align:left">
+      <tr>
+        <th class="letterBolder">
+          MBL #:
+        </th>
+        <th class="letter" width="20%">
+          {{mbl}}
+        </th>
+        <th class="letterBolder" >
+          SHIPLINE:
+        </th>
+        <th class="letter" width="20%" >
+          {{internationalCarrier}}
+        </th>
+        <th class="letterBolder" >
+          PAGE NO:
+        </th>
+        <th class="letter" width="20%" >
+          1 of 1
+        </th>
+      </tr>
+      <tr>
+        <th class="letterBolder">
+          AGENT #:
+        </th>
+        <th class="letter">
+          {{carrier}}
+        </th>
+        <th class="letterBolder">
+          VESSEL:
+        </th>
+        <th class="letter">
+          {{vessel}}
+        </th>
+        <th class="letterBolder">
+          PORT OF LOADING:
+        </th>
+        <th class="letter">
+          {{portOfLoading}}
+        </th>
+      </tr>
+      <tr>
+        <th class="letterBolder">
+          DEPARTURE DATE:
+        </th>
+        <th class="letter">
+         {{etd}}
+        </th>
+        <th class="letterBolder">
+          VOYAGE:
+        </th>
+        <th class="letter">
+          {{voyage}}
+        </th>
+        <th class="letterBolder">
+          PORT OF UNLOADING:
+        </th>
+        <th class="letter">
+          {{portOfUnloading}}
+        </th>
+      </tr>
+    </table>
+    <table width="800px" style="text-align:left">
+      <tr class="encabezado">
+        <th class="letter" width="92px">
+          B/L #:
+        </th>
+        <th class="letter" width="70px">
+          PCS
+        </th>
+        <th class="letter" width="70px">
+          WEIGHT:
+        </th>
+        <th class="letter" width="92px">
+          VOLUME
+        </th>
+        <th class="letter" width="92px">
+          MARCKS AND NUMBERS
+        </th>
+        <th class="letter" width="98px">
+          DESCRIPTION OF GOODS
+        </th>
+        <th class="letter">
+          COMMENTS
+        </th>
+      </tr>
+      {{#each thepackages1}}
+      <tr>
+        <th class="letter">
+          {{../this.shipmentNumber}}
+        </th>
+        <th class="letter">
+          {{quantity}}
+        </th>
+        <th class="letter">
+          {{weightTotal}}
+        </th>
+        <th class="letter">
+          {{volume}}
+        </th>
+        <th class="letter">
+         
+        </th>
+        <th class="letter">
+          {{../this.goodsDescription}}
+        </th>
+        <th class="letter">
+
+        </th>
+      </tr>
+      {{/each}}
+    </table>
+    <table width="800px" style="text-align:left">
+      <th class="letterBolder">
+        Shipper
+      </th>
+      <th class="letterBolder">
+        Consignee
+      </th>
+      <th class="letterBolder">
+        Notify
+      </th>
+      <th class="letterBolder">
+        Declared Value
+      </th>
+
+      </tr>
+      <tr>
+        <th class="letter" width="200px">
+          {{nameshipper}}
+          {{addreshipper1}} <br>
+          {{addreshipper2}} <br>
+          {{countryshipper}} / {{cityshipper}}
+        </th>
+        <th class="letter" width="200px">
+          {{nameconsignee}} <br>
+          {{addressconsignee1}} <br>
+          {{addressconsignee2}} <br>
+          {{cityconsignee}} / {{cityconsignee}}
+        </th>
+        <th class="letter" width="200px">
+          {{namenotify}} <br>
+          {{addressNotify1}} <br>
+          {{addressNotify2}} <br>
+          {{addresscountryNotify}} / {{addresscityNotify}}
+        </th>
+
+        <th class="letter" colspan="3" style="text-align: center;" width="200px">
+          {{fob}}
+        </th>
+
+      </tr>
+    </table>
+
+<br>
+    <table width="450px" class="no-break" style="text-align:right;margin-left:350px;">
+      <tr style="background-color: {{colors}};color: white;">
+        <th style="width: 10%;" class="letter">PIECES</th>
+        <th style="width: 10%;" class="letter">WEIGHT</th>
+        <th style="width: 10%;" class="letter">VOLUME</th>
+      <tr>
+        <th style="width: 10%;" class="letter">{{totalfinallypackages}}</th>
+        <th style="width: 10%;" class="letter">{{totallb}} lb </th>
+        <th style="width: 10%;" class="letter">{{sumft}} ft3</th>
+      </tr>
+      <tr>
+        <th style="width: 10%; border-left: 1px solid transparent;border-bottom: 1px solid transparent"></th>
+        <th style="width: 10%;" class="letter">{{{totalkg}}} kg </th>
+        <th style="width: 10%;" class="letter">{{sumt}} m3 </th>
+      </tr>
+    </table>
+
+    <br>
+
+    <div id="pageFooter" stye="text-align:right">
+      <table class="no-border" style="margin-left:1%;width: 98%; border: solid 5px white;">
+        <tr>
+          <td style="text-align: right;">
+            <span style="font-size: 40%;">POWERED BY</span>
+            <img style="width: 10%;margin-right:4%;margin-bottom: -1%;"
+              src="data:image/{{typeimagedaw}};base64,{{imagendaw}}" />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</section>
+
+</html>
